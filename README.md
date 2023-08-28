@@ -1,4 +1,7 @@
-### Hi there 👋
+Progetto e-commerce Ledzenith per la vendita di prodotti Led
+Amministratori:
+Daniele
+Serena
 
 <!--
 **ledzenith/ledzenith** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
