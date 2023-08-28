@@ -1,4 +1,4 @@
-Progetto e-commerce Ledzenith per la vendita di prodotti Led
+Progetto e-commerce Ledzenith per la vendita di prodotti Led.
 Amministratori:
 Daniele
 Serena
