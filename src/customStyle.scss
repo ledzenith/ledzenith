@@ -1,0 +1,11 @@
+$primary : rgb(3, 247, 3);
+
+.shadow-btn-sveglia{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(189,53,189,0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(189,53,189,0.71);
+    box-shadow: 0px 3px 15px -2px rgba(189,53,189,0.71);
+}
+
+
+@import '~bootstrap/scss/bootstrap.scss';
+

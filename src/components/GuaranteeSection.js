@@ -3,7 +3,7 @@ const GuaranteeSection = () => {
     // al click delle immagini si apre un popup che mostra la descrizione della garanzia
     
     return ( 
-        pass
+        <></>
      );
 }
  
