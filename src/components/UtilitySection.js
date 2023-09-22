@@ -61,36 +61,43 @@ const UtilitySection = () => {
      
     return ( 
         <div id="mainCarousel" className="carousel slide carousel-fade">
-            <div className="carousel-inner">
+            <div className="carousel-inner container text-center">
 
-                <div className="carousel-item active">
-                    {/* <div className="embed-responsive embed-responsive-16by9">
-                    <iframe className="embed-responsive-item d-block w-100" src="https://www.youtube.com/embed/GMGYo8GCEzI" alt="video prodotto" allowfullscreen/>
-                    </div> */}
-                    <BottoneUtility key={"sveglia"} 
-                                    name={"Sveglia"} 
-                                    hoverState={btnSvegliaHover}
-                                    handleBtnHover={handleBtnHover}
-                                    handleBtnLeave={handleBtnLeave}
-                                    bgColor={"bg-color-sveglia"}
-                                    shadowColor={"shadow-btn-sveglia"}/>
+                <div className="carousel-item active position-relative row d-flex">
+                    
+                    <div className="col d-flex flex-column">
+                        
+                        <BottoneUtility key={"sveglia"} 
+                                        name={"Sveglia"} 
+                                        hoverState={btnSvegliaHover}
+                                        handleBtnHover={handleBtnHover}
+                                        handleBtnLeave={handleBtnLeave}
+                                        bgColor={"bg-color-sveglia"}
+                                        shadowColor={"shadow-btn-sveglia"}/>
 
-                    <BottoneUtility key={"luci"} 
-                                    name={"Luci Led"}
-                                    hoverState={btnLuciHover} 
-                                    handleBtnHover={handleBtnHover} 
-                                    handleBtnLeave={handleBtnLeave} 
-                                    bgColor={"bg-color-luci"}
-                                    shadowColor={"shadow-btn-luci"}/>
+                        <BottoneUtility key={"luci"} 
+                                        name={"Luci Led"}
+                                        hoverState={btnLuciHover} 
+                                        handleBtnHover={handleBtnHover} 
+                                        handleBtnLeave={handleBtnLeave} 
+                                        bgColor={"bg-color-luci"}
+                                        shadowColor={"shadow-btn-luci"}/>
 
-                    <BottoneUtility key={"musica"} 
-                                    name={"Musica"}
-                                    hoverState={btnMusicaHover} 
-                                    handleBtnHover={handleBtnHover} 
-                                    handleBtnLeave={handleBtnLeave} 
-                                    bgColor={"bg-color-musica"}
-                                    shadowColor={"shadow-btn-musica"}/>
+                        <BottoneUtility key={"musica"} 
+                                        name={"Musica"}
+                                        hoverState={btnMusicaHover} 
+                                        handleBtnHover={handleBtnHover} 
+                                        handleBtnLeave={handleBtnLeave} 
+                                        bgColor={"bg-color-musica"}
+                                        shadowColor={"shadow-btn-musica"}/>
                                     
+                    </div>
+
+                    <div className="ratio ratio-4x3 m-2 col d-flex">
+                        <iframe title="video product" className="" src="https://www.youtube.com/embed/GMGYo8GCEzI" allowFullScreen/>
+                    </div>
+
+                    <div className="col d-flex flex-column">
                     <BottoneUtility key={"wireless"} 
                                     name={"Ricarica Wireless"}
                                     hoverState={btnWirelessHover} 
@@ -115,7 +122,7 @@ const UtilitySection = () => {
                                     bgColor={"bg-color-risveglio"}
                                     shadowColor={"shadow-btn-risveglio"}/>
                                     
-
+                    </div>
                 </div>
 
 
