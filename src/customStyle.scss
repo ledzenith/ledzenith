@@ -1,11 +1,68 @@
 $primary : rgb(3, 247, 3);
 
+$spacer : 2.8rem;
+
+// Stile Dei Bottoni 
 .shadow-btn-sveglia{
     -webkit-box-shadow: 0px 3px 15px -2px rgba(189,53,189,0.71);
     -moz-box-shadow: 0px 3px 15px -2px rgba(189,53,189,0.71);
     box-shadow: 0px 3px 15px -2px rgba(189,53,189,0.71);
 }
+#bg-color-sveglia{
+    background-color:rgb(212, 23, 212);
+}
+.shadow-btn-luci{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(189, 101, 53, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(189, 101, 53, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(189, 101, 53, 0.71);
+}
+#bg-color-luci{
+    background-color: rgb(201, 100, 46);
+}
+.shadow-btn-musica{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(123, 53, 189, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(123, 53, 189, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(123, 53, 189, 0.71);
+}
+#bg-color-musica{
+    background-color: rgb(117, 36, 193);
+}
+.shadow-btn-wireless{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(194, 53, 95, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(194, 53, 95, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(194, 53, 95, 0.71);
+}
+#bg-color-wireless{
+    background-color: rgba(195, 40, 87)
+}
+.shadow-btn-app{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(53, 164, 189, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(53, 164, 189, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(53, 164, 189, 0.71);
+}
+#bg-color-app{
+    background-color: rgb(42, 172, 202);
+}
+.shadow-btn-risveglio{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(173, 189, 53, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(173, 189, 53, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(173, 189, 53, 0.71);
+}
+#bg-color-risveglio{
+    background-color: rgb(196, 205, 38)
+}
+.carousel-item {
+    color: white
+}
+.carousel-inner {
+    margin: 0 2vw;
+}
+.btn {
+    min-width: 220px;
+    max-width: 260px
+}
 
 
 @import '~bootstrap/scss/bootstrap.scss';
+
 
