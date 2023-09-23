@@ -71,6 +71,14 @@ $spacer : 2vw;
     padding-left: 3rem !important;
     padding-right: 3rem !important;
 }
+.btn-bg-gray{
+    background-color: #e0e6ec !important;
+}
+
+
+.bg-utility-custom {
+    background-color: #262b2e !important;
+}
 
 
 
@@ -93,7 +101,7 @@ $spacer : 2vw;
     }
 
     .btn-gap-y{
-        row-gap: 10vw;
+        row-gap: 4vw;
     }
 
     .btn-group{

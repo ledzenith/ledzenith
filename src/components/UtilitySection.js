@@ -69,7 +69,7 @@ const UtilitySection = () => {
 
      
     return (          
-                <div className="vw-100 vh-100 container-fluid">
+                <div className="vw-100 vh-100 container-fluid bg-utility-custom bg-gradient">
                         <div className="row d-block d-lg-flex align-items-center justify-content-center position-relative h-100 white">
                             <div className="order-2 col-6 mx-auto d-flex flex-column justify-content-center align-items-center w-50 mt-video">
                                 <div className="ratio ratio-4x3 min-width-video">
