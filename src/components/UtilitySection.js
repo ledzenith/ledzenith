@@ -16,146 +16,138 @@ const UtilitySection = () => {
     const [btnWirelessHover, setBtnWirelessHover] = useState(false)
     const [btnAppHover, setBtnAppHover] = useState(false)
     const [btnRisveglioHover, setBtnRisveglioHover] = useState(false)
+    const [btnVideoHover, setBtnVideoHover] = useState(false)
 
-    function handleBtnHover (name){
-        if(name === "Sveglia"){
+    function handleBtnHover (id){
+        if(id === "sveglia"){
             setBtnSvegliaHover(true)
         } else
-        if(name === "Luci Led"){
+        if(id === "luci"){
             setBtnLuciHover(true)
         } else
-        if(name === "Musica"){
+        if(id === "musica"){
             setBtnMusicaHover(true)
         }
-        if(name === "Ricarica Wireless"){
+        if(id === "wireless"){
             setBtnWirelessHover(true)
         }
-        if(name === "App"){
+        if(id === "app"){
             setBtnAppHover(true)
         }
-        if(name === "Simulazione Risveglio"){
+        if(id === "risveglio"){
             setBtnRisveglioHover(true)
-        }
-        
+        } else
+        if(id === "video"){
+            setBtnVideoHover(true)
+        } 
     }
 
-    function handleBtnLeave (name){
-        if(name === "Sveglia"){
+    function handleBtnLeave (id){
+        if(id === "sveglia"){
             setBtnSvegliaHover(false)
         } else
-        if(name === "Luci Led"){
+        if(id === "luci"){
             setBtnLuciHover(false)
         } else
-        if(name === "Musica"){
+        if(id === "musica"){
             setBtnMusicaHover(false)
-        }
-        if(name === "Ricarica Wireless"){
+        } else
+        if(id === "wireless"){
             setBtnWirelessHover(false)
-        }
-        if(name === "App"){
+        } else
+        if(id === "app"){
             setBtnAppHover(false)
-        }
-        if(name === "Simulazione Risveglio"){
+        } else
+        if(id === "risveglio"){
             setBtnRisveglioHover(false)
-        }
+        } else
+        if(id === "video"){
+            setBtnVideoHover(false)
+        } 
+
     }
 
      
-    return ( 
-        <div id="mainCarousel" className="carousel slide carousel-fade vh-100 d-flex justify-content-center align-items-center">
-            <div className="carousel-inner h-100 w-100">
-                <div className="carousel-item active position-relative row d-flex align-items-center h-100 w-100 p-2">
+    return (          
+                <div className="vw-100 vh-100 container-fluid">
+                        <div className="row d-block d-lg-flex align-items-center justify-content-center position-relative h-100 white">
+                            <div className="order-2 col-6 mx-auto d-flex flex-column justify-content-center align-items-center w-50 mt-video">
+                                <div className="ratio ratio-4x3 min-width-video">
+                                        {/* <iframe title="video product" className="p-3" src={video} allowFullScreen/> */}
+                                        <video className="position-relative" src={video} allowFullScreen autoPlay controls muted></video>
+                                </div>
+                                <BottoneUtility key={"video"}
+                                                id={"video"}
+                                                name={"Mostra Video"} 
+                                                hoverState={btnVideoHover}
+                                                handleBtnHover={handleBtnHover}
+                                                handleBtnLeave={handleBtnLeave}
+                                                bgColor={"bg-color-video"}
+                                                shadowColor={"shadow-btn-video"}/>
+                            </div>
 
-                <div className="ratio ratio-4x3 col-md-6 w-50 mx-3 order-2">
-                        {/* <iframe title="video product" className="p-3" src={video} allowFullScreen/> */}
-                        <video className="" src={video} allowFullScreen autoPlay controls muted></video>
-                    </div>
+                            <div className="btn-group col d-flex flex-column order-1 btn-gap-y btn-px">
+                                
+                                <BottoneUtility key={"sveglia"}
+                                                id={"sveglia"} 
+                                                name={"Sveglia"} 
+                                                hoverState={btnSvegliaHover}
+                                                handleBtnHover={handleBtnHover}
+                                                handleBtnLeave={handleBtnLeave}
+                                                bgColor={"bg-color-sveglia"}
+                                                shadowColor={"shadow-btn-sveglia"}/>
 
-                    <div className="col d-flex flex-column row-gap-5 align-items-center order-1 ">
-                        
-                        <BottoneUtility key={"sveglia"} 
-                                        name={"Sveglia"} 
-                                        hoverState={btnSvegliaHover}
-                                        handleBtnHover={handleBtnHover}
-                                        handleBtnLeave={handleBtnLeave}
-                                        bgColor={"bg-color-sveglia"}
-                                        shadowColor={"shadow-btn-sveglia"}/>
+                                <BottoneUtility key={"luci"} 
+                                                id={"luci"}
+                                                name={"Luci Led"}
+                                                hoverState={btnLuciHover} 
+                                                handleBtnHover={handleBtnHover} 
+                                                handleBtnLeave={handleBtnLeave} 
+                                                bgColor={"bg-color-luci"}
+                                                shadowColor={"shadow-btn-luci"}/>
 
-                        <BottoneUtility key={"luci"} 
-                                        name={"Luci Led"}
-                                        hoverState={btnLuciHover} 
-                                        handleBtnHover={handleBtnHover} 
-                                        handleBtnLeave={handleBtnLeave} 
-                                        bgColor={"bg-color-luci"}
-                                        shadowColor={"shadow-btn-luci"}/>
+                                <BottoneUtility key={"musica"} 
+                                                id={"musica"}
+                                                name={"Musica"}
+                                                hoverState={btnMusicaHover} 
+                                                handleBtnHover={handleBtnHover} 
+                                                handleBtnLeave={handleBtnLeave} 
+                                                bgColor={"bg-color-musica"}
+                                                shadowColor={"shadow-btn-musica"}/>
+                                            
+                            </div>
 
-                        <BottoneUtility key={"musica"} 
-                                        name={"Musica"}
-                                        hoverState={btnMusicaHover} 
-                                        handleBtnHover={handleBtnHover} 
-                                        handleBtnLeave={handleBtnLeave} 
-                                        bgColor={"bg-color-musica"}
-                                        shadowColor={"shadow-btn-musica"}/>
-                                    
-                    </div>
-
-                    <div className="col d-flex flex-column row-gap-5 align-items-center order-3">
-                    <BottoneUtility key={"wireless"} 
-                                    name={"Ricarica Wireless"}
-                                    hoverState={btnWirelessHover} 
-                                    handleBtnHover={handleBtnHover} 
-                                    handleBtnLeave={handleBtnLeave} 
-                                    bgColor={"bg-color-wireless"}
-                                    shadowColor={"shadow-btn-wireless"}/>
-                                    
-                    <BottoneUtility key={"app"} 
-                                    name={"App"}
-                                    hoverState={btnAppHover} 
-                                    handleBtnHover={handleBtnHover} 
-                                    handleBtnLeave={handleBtnLeave} 
-                                    bgColor={"bg-color-app"}
-                                    shadowColor={"shadow-btn-app"}/>
-                                    
-                    <BottoneUtility key={"risveglio"} 
-                                    name={"Simulazione Risveglio"}
-                                    hoverState={btnRisveglioHover} 
-                                    handleBtnHover={handleBtnHover} 
-                                    handleBtnLeave={handleBtnLeave} 
-                                    bgColor={"bg-color-risveglio"}
-                                    shadowColor={"shadow-btn-risveglio"}/>
-                                    
-                    </div>
+                            <div className=" btn-group col d-flex flex-column order-3 btn-gap-y btn-px">
+                            <BottoneUtility key={"wireless"}
+                                            id={"wireless"} 
+                                            name={"Ricarica Wireless"}
+                                            hoverState={btnWirelessHover} 
+                                            handleBtnHover={handleBtnHover} 
+                                            handleBtnLeave={handleBtnLeave} 
+                                            bgColor={"bg-color-wireless"}
+                                            shadowColor={"shadow-btn-wireless"}/>
+                                            
+                            <BottoneUtility key={"app"} 
+                                            id={"app"} 
+                                            name={"App"}
+                                            hoverState={btnAppHover} 
+                                            handleBtnHover={handleBtnHover} 
+                                            handleBtnLeave={handleBtnLeave} 
+                                            bgColor={"bg-color-app"}
+                                            shadowColor={"shadow-btn-app"}/>
+                                            
+                            <BottoneUtility key={"risveglio"}
+                                            id={"risveglio"}    
+                                            name={"Simulazione Risveglio"}
+                                            hoverState={btnRisveglioHover} 
+                                            handleBtnHover={handleBtnHover} 
+                                            handleBtnLeave={handleBtnLeave} 
+                                            bgColor={"bg-color-risveglio"}
+                                            shadowColor={"shadow-btn-risveglio"}/>
+                                            
+                            </div>
+                        </div>
                 </div>
-
-
-                <div className="carousel-item">
-                    <h1> Elemento Carosello </h1>
-                </div>
-
-            </div>
-
-
-            {/* <button
-                className="carousel-control-prev"
-                type="button"
-                data-bs-target="#mainCarousel"
-                data-bs-slide="prev"
-            >
-                <span className="carousel-control-prev-icon" aria-hidden="true" />
-                <span className="visually-hidden">Previous</span>
-            </button>
-
-            <button
-                className="carousel-control-next"
-                type="button"
-                data-bs-target="#mainCarousel"
-                data-bs-slide="next"
-            >
-                <span className="carousel-control-next-icon" aria-hidden="true" />
-                <span className="visually-hidden">Next</span>
-            </button> */}
-
-        </div>
      );
 }
  

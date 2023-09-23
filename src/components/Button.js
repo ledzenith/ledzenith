@@ -1,12 +1,12 @@
 
-const BottoneUtility = ({name, hoverState, handleBtnHover, handleBtnLeave, bgColor, shadowColor}) => {
+const BottoneUtility = ({id, name, hoverState, handleBtnHover, handleBtnLeave, bgColor, shadowColor}) => {
     return ( 
     <>                          
-        <button type="button" className={"btn p-2 my-4 rounded-pill " + (hoverState ? '' : `${shadowColor}`)}
+        <button type="button" className={"btn p-2 fw-bold fs-6 my-4 rounded-pill " + (hoverState ? '' : `${shadowColor}`)}
                               id={hoverState ? `${bgColor}` : ""}    
                               data-bs-toggle="button" 
-                              onMouseOver={()=> handleBtnHover(name)}
-                              onMouseLeave={()=> handleBtnLeave(name)}> 
+                              onMouseOver={()=> handleBtnHover(id)}
+                              onMouseLeave={()=> handleBtnLeave(id)}> 
         {name} 
         </button>
     </> );
