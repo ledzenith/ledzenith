@@ -82,7 +82,7 @@ $spacer : 2vw;
 
 
 
-// Stile Video
+// Stile Video e design
 .min-width-video{
     min-width: 320px
 }
@@ -95,15 +95,42 @@ $spacer : 2vw;
 }
 
 .attacco-cavo{
-    width: 1.5vw;
-    height: 1.5vw;
+    width: 1.2rem;
+    height: 1.2rem;
     border-radius: 0 50% 50% 0;
-    background: rgb(145,145,145);
-    background: -moz-linear-gradient(207deg, rgba(145,145,145,1) 0%, rgba(105,105,105,1) 42%);
-    background: -webkit-linear-gradient(207deg, rgba(145,145,145,1) 0%, rgba(105,105,105,1) 42%);
-    background: linear-gradient(207deg, rgba(145,145,145,1) 0%, rgba(105,105,105,1) 42%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#919191",endColorstr="#696969",GradientType=1);
+    background: rgb(246,246,246);
+    background: -moz-linear-gradient(207deg, rgba(246,246,246,1) 0%, rgba(173,173,173,1) 100%);
+    background: -webkit-linear-gradient(207deg, rgba(246,246,246,1) 0%, rgba(173,173,173,1) 100%);
+    background: linear-gradient(207deg, rgba(246,246,246,1) 0%, rgba(173,173,173,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f6f6f6",endColorstr="#adadad",GradientType=1);
 }
+.left-group-cavo,.right-group-cavo{
+    position: absolute;
+    z-index:1;
+    gap: 6vw;
+    top: 18%;
+}
+.left-group-cavo{
+    right: 100%;
+}
+.right-group-cavo{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    left: 100%;
+}
+
+.video-container{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.rotate-90{
+    transform: rotate(270deg);
+}
+.attacco-b-pos{
+    margin-top: -0.4rem;
+}
+
 
 @media (min-width: 992px) { 
     .btn {
@@ -121,6 +148,14 @@ $spacer : 2vw;
     .btn-px{
         padding-left: inherit !important;
         padding-right: inherit !important;
+    }
+    .video-container{
+        margin-right: 3vw !important;
+        margin-left: 3vw !important;
+    }
+
+    .lg-mb{
+        margin-bottom: 5rem;
     }
  }
 

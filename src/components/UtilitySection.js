@@ -18,6 +18,14 @@ const UtilitySection = () => {
     const [btnRisveglioHover, setBtnRisveglioHover] = useState(false)
     const [btnVideoHover, setBtnVideoHover] = useState(false)
 
+    const [btnSvegliaClick, setBtnSvegliaClick] = useState(false)
+    const [btnLuciClick, setBtnLuciClick] = useState(false)
+    const [btnMusicaClick, setBtnMusicaClick] = useState(false)
+    const [btnWirelessClick, setBtnWirelessClick] = useState(false)
+    const [btnAppClick, setBtnAppClick] = useState(false)
+    const [btnRisveglioClick, setBtnRisveglioClick] = useState(false)
+    const [btnVideoClick, setBtnVideoClick] = useState(false)
+
     function handleBtnHover (id){
         if(id === "sveglia"){
             setBtnSvegliaHover(true)
@@ -41,7 +49,7 @@ const UtilitySection = () => {
             setBtnVideoHover(true)
         } 
     }
-
+    
     function handleBtnLeave (id){
         if(id === "sveglia"){
             setBtnSvegliaHover(false)
@@ -67,16 +75,55 @@ const UtilitySection = () => {
 
     }
 
+    function handleBtnClick (id){
+        if(id === "sveglia"){
+            setBtnSvegliaClick(true)
+        } else
+        if(id === "luci"){
+            setBtnLuciClick(true)
+        } else
+        if(id === "musica"){
+            setBtnMusicaClick(true)
+        } else
+        if(id === "wireless"){
+            setBtnWirelessClick(true)
+        } else
+        if(id === "app"){
+            setBtnAppClick(true)
+        } else
+        if(id === "risveglio"){
+            setBtnRisveglioClick(true)
+        } else
+        if(id === "video"){
+            setBtnVideoClick(true)
+        } 
+
+    }
+
      
     return (          
                 <div className="vw-100 vh-100 container-fluid bg-utility-custom bg-gradient d-flex align-items-center justify-content-center">
                         <div className="row d-block d-lg-flex align-items-center justify-content-cente white">
-                            <div className="order-2 col-6 mx-auto d-flex flex-column justify-content-center align-items-center w-50 mt-video">
-                                <div className="attacco-cavo"></div>
-                                <div className="ratio ratio-4x3 min-width-video">
-                                        {/* <iframe title="video product" className="p-3" src={video} allowFullScreen/> */}
-                                        <video className="position-relative" src={video} allowFullScreen autoPlay controls muted></video>
+                            <div className="video-container order-2 col-6 d-flex flex-column justify-content-center align-items-center w-50 mt-video">
+                                
+                                <div className="position-relative">
+                                    <div className="d-none d-lg-flex left-group-cavo flex-column">
+                                        <div className="attacco-cavo"></div>
+                                        <div className="attacco-cavo"></div>
+                                        <div className="attacco-cavo"></div>
+                                    </div>
+                                    <div className="ratio ratio-4x3 min-width-video">
+                                            {/* <iframe title="video product" className="p-3" src={video} allowFullScreen/> */}
+                                            <video className="border border-white border-2 rounded-1 position-relative" src={video} allowFullScreen autoPlay controls muted></video>
+                                    </div>
+                                    <div className="d-none d-lg-flex right-group-cavo flex-column">
+                                        <div className="attacco-cavo"></div>
+                                        <div className="attacco-cavo"></div>
+                                        <div className="attacco-cavo"></div>
+                                    </div>
                                 </div>
+
+                                <div className="attacco-cavo rotate-90 attacco-b-pos"></div>
                                 <div className="mt-3">
                                 <BottoneUtility key={"video"}
                                                 id={"video"}
@@ -89,7 +136,7 @@ const UtilitySection = () => {
                                 </div>
                             </div>
 
-                            <div className="btn-group col d-flex flex-column order-1 btn-gap-y btn-px me-4">
+                            <div className="btn-group col d-flex flex-column order-1 btn-gap-y btn-px lg-mb">
                                 
                                 <BottoneUtility key={"sveglia"}
                                                 id={"sveglia"} 
@@ -120,33 +167,33 @@ const UtilitySection = () => {
                                             
                             </div>
 
-                            <div className=" btn-group col d-flex flex-column order-3 btn-gap-y btn-px ms-4">
-                            <BottoneUtility key={"wireless"}
-                                            id={"wireless"} 
-                                            name={"Ricarica Wireless"}
-                                            hoverState={btnWirelessHover} 
-                                            handleBtnHover={handleBtnHover} 
-                                            handleBtnLeave={handleBtnLeave} 
-                                            bgColor={"bg-color-wireless"}
-                                            shadowColor={"shadow-btn-wireless"}/>
-                                            
-                            <BottoneUtility key={"app"} 
-                                            id={"app"} 
-                                            name={"App"}
-                                            hoverState={btnAppHover} 
-                                            handleBtnHover={handleBtnHover} 
-                                            handleBtnLeave={handleBtnLeave} 
-                                            bgColor={"bg-color-app"}
-                                            shadowColor={"shadow-btn-app"}/>
-                                            
-                            <BottoneUtility key={"risveglio"}
-                                            id={"risveglio"}    
-                                            name={"Simulazione Risveglio"}
-                                            hoverState={btnRisveglioHover} 
-                                            handleBtnHover={handleBtnHover} 
-                                            handleBtnLeave={handleBtnLeave} 
-                                            bgColor={"bg-color-risveglio"}
-                                            shadowColor={"shadow-btn-risveglio"}/>
+                            <div className=" btn-group col d-flex flex-column order-3 btn-gap-y btn-px lg-mb">
+                                <BottoneUtility key={"wireless"}
+                                                id={"wireless"} 
+                                                name={"Ricarica Wireless"}
+                                                hoverState={btnWirelessHover} 
+                                                handleBtnHover={handleBtnHover} 
+                                                handleBtnLeave={handleBtnLeave} 
+                                                bgColor={"bg-color-wireless"}
+                                                shadowColor={"shadow-btn-wireless"}/>
+                                                
+                                <BottoneUtility key={"app"} 
+                                                id={"app"} 
+                                                name={"App"}
+                                                hoverState={btnAppHover} 
+                                                handleBtnHover={handleBtnHover} 
+                                                handleBtnLeave={handleBtnLeave} 
+                                                bgColor={"bg-color-app"}
+                                                shadowColor={"shadow-btn-app"}/>
+                                                
+                                <BottoneUtility key={"risveglio"}
+                                                id={"risveglio"}    
+                                                name={"Simulazione Risveglio"}
+                                                hoverState={btnRisveglioHover} 
+                                                handleBtnHover={handleBtnHover} 
+                                                handleBtnLeave={handleBtnLeave} 
+                                                bgColor={"bg-color-risveglio"}
+                                                shadowColor={"shadow-btn-risveglio"}/>
                                             
                             </div>
                         </div>
