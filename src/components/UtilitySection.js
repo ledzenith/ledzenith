@@ -69,13 +69,15 @@ const UtilitySection = () => {
 
      
     return (          
-                <div className="vw-100 vh-100 container-fluid bg-utility-custom bg-gradient">
-                        <div className="row d-block d-lg-flex align-items-center justify-content-center position-relative h-100 white">
+                <div className="vw-100 vh-100 container-fluid bg-utility-custom bg-gradient d-flex align-items-center justify-content-center">
+                        <div className="row d-block d-lg-flex align-items-center justify-content-cente white">
                             <div className="order-2 col-6 mx-auto d-flex flex-column justify-content-center align-items-center w-50 mt-video">
+                                <div className="attacco-cavo"></div>
                                 <div className="ratio ratio-4x3 min-width-video">
                                         {/* <iframe title="video product" className="p-3" src={video} allowFullScreen/> */}
                                         <video className="position-relative" src={video} allowFullScreen autoPlay controls muted></video>
                                 </div>
+                                <div className="mt-3">
                                 <BottoneUtility key={"video"}
                                                 id={"video"}
                                                 name={"Mostra Video"} 
@@ -84,9 +86,10 @@ const UtilitySection = () => {
                                                 handleBtnLeave={handleBtnLeave}
                                                 bgColor={"bg-color-video"}
                                                 shadowColor={"shadow-btn-video"}/>
+                                </div>
                             </div>
 
-                            <div className="btn-group col d-flex flex-column order-1 btn-gap-y btn-px">
+                            <div className="btn-group col d-flex flex-column order-1 btn-gap-y btn-px me-4">
                                 
                                 <BottoneUtility key={"sveglia"}
                                                 id={"sveglia"} 
@@ -117,7 +120,7 @@ const UtilitySection = () => {
                                             
                             </div>
 
-                            <div className=" btn-group col d-flex flex-column order-3 btn-gap-y btn-px">
+                            <div className=" btn-group col d-flex flex-column order-3 btn-gap-y btn-px ms-4">
                             <BottoneUtility key={"wireless"}
                                             id={"wireless"} 
                                             name={"Ricarica Wireless"}
