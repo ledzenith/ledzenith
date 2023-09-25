@@ -3,6 +3,11 @@ import { useState } from "react";
 import BottoneUtility from "./Button";
 
 import video from "../assets/video/videoProduct.mp4"
+import topWire from "../assets/img/top-wire.png"
+import topWireActiveLeft from "../assets/img/top-wire-active-left.png"
+import topWireActiveRight from "../assets/img/top-wire-active-right.png"
+import {testoSveglia, testoApp, testoLuci, testoMusica, testoRisveglio, testoWireless} from "../assets/Testi";
+
 
     // Sezione che mostra l'utilità del prodotto ed il funzionamento
     // Sarà uno Slider con 2 sezioni 
@@ -24,7 +29,7 @@ const UtilitySection = () => {
     const [btnWirelessClick, setBtnWirelessClick] = useState(false)
     const [btnAppClick, setBtnAppClick] = useState(false)
     const [btnRisveglioClick, setBtnRisveglioClick] = useState(false)
-    const [btnVideoClick, setBtnVideoClick] = useState(false)
+    const [btnVideoClick, setBtnVideoClick] = useState(true)
 
     function handleBtnHover (id){
         if(id === "sveglia"){
@@ -77,25 +82,25 @@ const UtilitySection = () => {
 
     function handleBtnClick (id){
         if(id === "sveglia"){
-            setBtnSvegliaClick(true)
+            setBtnSvegliaClick(true); setBtnLuciClick(false); setBtnMusicaClick(false); setBtnWirelessClick(false); setBtnAppClick(false); setBtnRisveglioClick(false); setBtnVideoClick(false)
         } else
         if(id === "luci"){
-            setBtnLuciClick(true)
+            setBtnSvegliaClick(false); setBtnLuciClick(true); setBtnMusicaClick(false); setBtnWirelessClick(false); setBtnAppClick(false); setBtnRisveglioClick(false); setBtnVideoClick(false)
         } else
         if(id === "musica"){
-            setBtnMusicaClick(true)
+            setBtnSvegliaClick(false); setBtnLuciClick(false); setBtnMusicaClick(true); setBtnWirelessClick(false); setBtnAppClick(false); setBtnRisveglioClick(false); setBtnVideoClick(false)
         } else
         if(id === "wireless"){
-            setBtnWirelessClick(true)
+            setBtnSvegliaClick(false); setBtnLuciClick(false); setBtnMusicaClick(false); setBtnWirelessClick(true); setBtnAppClick(false); setBtnRisveglioClick(false); setBtnVideoClick(false)
         } else
         if(id === "app"){
-            setBtnAppClick(true)
+            setBtnSvegliaClick(false); setBtnLuciClick(false); setBtnMusicaClick(false); setBtnWirelessClick(false); setBtnAppClick(true); setBtnRisveglioClick(false); setBtnVideoClick(false)
         } else
         if(id === "risveglio"){
-            setBtnRisveglioClick(true)
+            setBtnSvegliaClick(false); setBtnLuciClick(false); setBtnMusicaClick(false); setBtnWirelessClick(false); setBtnAppClick(false); setBtnRisveglioClick(true); setBtnVideoClick(false)
         } else
         if(id === "video"){
-            setBtnVideoClick(true)
+            setBtnSvegliaClick(false); setBtnLuciClick(false); setBtnMusicaClick(false); setBtnWirelessClick(false); setBtnAppClick(false); setBtnRisveglioClick(false); setBtnVideoClick(true)
         } 
 
     }
@@ -104,19 +109,30 @@ const UtilitySection = () => {
     return (          
                 <div className="vw-100 vh-100 container-fluid bg-utility-custom bg-gradient d-flex align-items-center justify-content-center">
                         <div className="row d-block d-lg-flex align-items-center justify-content-cente white">
-                            <div className="video-container order-2 col-6 d-flex flex-column justify-content-center align-items-center w-50 mt-video">
-                                
+
+                            
+
+                            <div className="video-container order-2 col-lg-6 d-flex flex-column justify-content-center align-items-center w-50 mt-video">
                                 <div className="position-relative">
-                                    <div className="d-none d-lg-flex left-group-cavo flex-column">
-                                        <div className="attacco-cavo"></div>
+                                    <div className="d-none d-lg-flex left-group-cavo flex-column z-2">
+                                        <div className={"attacco-cavo" + (btnSvegliaClick ? " bg-attacco-sveglia ": "" )} id=""></div>
                                         <div className="attacco-cavo"></div>
                                         <div className="attacco-cavo"></div>
                                     </div>
-                                    <div className="ratio ratio-4x3 min-width-video">
+
+                                    <div className="video-text-container min-width-video border border-white border-2 rounded-1 ratio ratio-4x3">
+                                            <p className={btnSvegliaClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoSveglia}</p>
+                                            <p className={btnLuciClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoLuci}</p>
+                                            <p className={btnMusicaClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoMusica}</p>
+                                            <p className={btnWirelessClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoWireless}</p>
+                                            <p className={btnAppClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoApp}</p>
+                                            <p className={btnRisveglioClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoRisveglio}</p>
                                             {/* <iframe title="video product" className="p-3" src={video} allowFullScreen/> */}
-                                            <video className="border border-white border-2 rounded-1 position-relative" src={video} allowFullScreen autoPlay controls muted></video>
+                                            <video className={btnVideoClick ? "d-block position-relative object-fit-cover" : "d-none" } src={video} allowFullScreen autoPlay controls muted></video>
                                     </div>
-                                    <div className="d-none d-lg-flex right-group-cavo flex-column">
+
+
+                                    <div className="d-none d-lg-flex right-group-cavo flex-column z-2">
                                         <div className="attacco-cavo"></div>
                                         <div className="attacco-cavo"></div>
                                         <div className="attacco-cavo"></div>
@@ -131,19 +147,23 @@ const UtilitySection = () => {
                                                 hoverState={btnVideoHover}
                                                 handleBtnHover={handleBtnHover}
                                                 handleBtnLeave={handleBtnLeave}
+                                                handleBtnClick={handleBtnClick}
                                                 bgColor={"bg-color-video"}
                                                 shadowColor={"shadow-btn-video"}/>
                                 </div>
                             </div>
 
                             <div className="btn-group col d-flex flex-column order-1 btn-gap-y btn-px lg-mb">
-                                
+
+                                <img className="position-absolute cable-top-l z-1 d-none d-lg-block" src={btnSvegliaClick ? topWireActiveLeft : topWire} alt="top cable"></img>
                                 <BottoneUtility key={"sveglia"}
                                                 id={"sveglia"} 
                                                 name={"Sveglia"} 
                                                 hoverState={btnSvegliaHover}
+                                                clickState={btnSvegliaClick}
                                                 handleBtnHover={handleBtnHover}
                                                 handleBtnLeave={handleBtnLeave}
+                                                handleBtnClick={handleBtnClick}
                                                 bgColor={"bg-color-sveglia"}
                                                 shadowColor={"shadow-btn-sveglia"}/>
 
@@ -152,7 +172,8 @@ const UtilitySection = () => {
                                                 name={"Luci Led"}
                                                 hoverState={btnLuciHover} 
                                                 handleBtnHover={handleBtnHover} 
-                                                handleBtnLeave={handleBtnLeave} 
+                                                handleBtnLeave={handleBtnLeave}
+                                                handleBtnClick={handleBtnClick} 
                                                 bgColor={"bg-color-luci"}
                                                 shadowColor={"shadow-btn-luci"}/>
 
@@ -161,19 +182,24 @@ const UtilitySection = () => {
                                                 name={"Musica"}
                                                 hoverState={btnMusicaHover} 
                                                 handleBtnHover={handleBtnHover} 
-                                                handleBtnLeave={handleBtnLeave} 
+                                                handleBtnLeave={handleBtnLeave}
+                                                handleBtnClick={handleBtnClick} 
                                                 bgColor={"bg-color-musica"}
                                                 shadowColor={"shadow-btn-musica"}/>
                                             
                             </div>
 
                             <div className=" btn-group col d-flex flex-column order-3 btn-gap-y btn-px lg-mb">
+
+                            <img className="position-absolute cable-top-r z-1 d-none d-lg-block" src={btnWirelessClick ? topWireActiveRight : topWire} alt="top cable"></img>
                                 <BottoneUtility key={"wireless"}
                                                 id={"wireless"} 
                                                 name={"Ricarica Wireless"}
-                                                hoverState={btnWirelessHover} 
+                                                hoverState={btnWirelessHover}
+                                                clickState={btnWirelessClick} 
                                                 handleBtnHover={handleBtnHover} 
-                                                handleBtnLeave={handleBtnLeave} 
+                                                handleBtnLeave={handleBtnLeave}
+                                                handleBtnClick={handleBtnClick} 
                                                 bgColor={"bg-color-wireless"}
                                                 shadowColor={"shadow-btn-wireless"}/>
                                                 
@@ -183,6 +209,7 @@ const UtilitySection = () => {
                                                 hoverState={btnAppHover} 
                                                 handleBtnHover={handleBtnHover} 
                                                 handleBtnLeave={handleBtnLeave} 
+                                                handleBtnClick={handleBtnClick}
                                                 bgColor={"bg-color-app"}
                                                 shadowColor={"shadow-btn-app"}/>
                                                 
@@ -192,6 +219,7 @@ const UtilitySection = () => {
                                                 hoverState={btnRisveglioHover} 
                                                 handleBtnHover={handleBtnHover} 
                                                 handleBtnLeave={handleBtnLeave} 
+                                                handleBtnClick={handleBtnClick}
                                                 bgColor={"bg-color-risveglio"}
                                                 shadowColor={"shadow-btn-risveglio"}/>
                                             
