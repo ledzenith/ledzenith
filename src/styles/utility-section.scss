@@ -1,0 +1,236 @@
+// Stile Dei Bottoni 
+.shadow-btn-sveglia{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(189,53,189,0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(189,53,189,0.71);
+    box-shadow: 0px 3px 15px -2px rgba(189,53,189,0.71);
+}
+#bg-color-sveglia{
+    background-color:rgb(212, 23, 212) !important;
+}
+.shadow-btn-luci{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(189, 101, 53, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(189, 101, 53, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(189, 101, 53, 0.71);
+}
+#bg-color-luci{
+    background-color: rgb(201, 100, 46) !important;
+}
+.shadow-btn-musica{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(123, 53, 189, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(123, 53, 189, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(123, 53, 189, 0.71);
+}
+#bg-color-musica{
+    background-color: rgb(117, 36, 193) !important;
+}
+.shadow-btn-wireless{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(194, 53, 95, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(194, 53, 95, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(194, 53, 95, 0.71);
+}
+#bg-color-wireless{
+    background-color: rgb(195, 40, 87) !important;
+}
+.shadow-btn-app{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(53, 164, 189, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(53, 164, 189, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(53, 164, 189, 0.71);
+}
+#bg-color-app{
+    background-color: rgb(42, 172, 202) !important;
+}
+.shadow-btn-risveglio{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(173, 189, 53, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(173, 189, 53, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(173, 189, 53, 0.71);
+}
+#bg-color-risveglio{
+    background-color: rgb(196, 205, 38) !important;
+}
+.shadow-btn-video{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(53, 189, 60, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(53, 189, 60, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(53, 189, 60, 0.71);
+}
+#bg-color-video{
+    background-color: rgb(41, 184, 48) !important;
+}
+
+.btn {
+    min-width: 200px;
+    color: none;
+    max-width: 350px;
+}
+
+.btn-px{
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+.btn-bg-gray{
+    background-color: #e0e6ec !important;
+}
+
+
+.white{
+    color: white !important;
+}
+.black{
+    color: #262b2e;
+}
+
+
+.bg-utility-custom {
+    background-color: #262b2e !important;
+}
+
+.border-solid{
+    border: solid;
+}
+
+
+// Stile Video e Design Attorno
+.border-sveglia{
+    border-color: rgb(212, 23, 212) !important;
+}
+.border-luci{
+    border-color: rgb(201, 100, 46) !important;
+}
+.border-musica{
+    border-color: rgb(117, 36, 193) !important;
+}
+.border-wireless{
+    border-color: rgb(195, 40, 87) !important;
+}
+.border-app{
+    border-color: rgb(42, 172, 202) !important;
+}
+.border-risveglio{
+    border-color: rgb(196, 205, 38) !important;
+}
+.border-video{
+    border-color: rgb(41, 184, 48) !important;
+}
+
+.size-video-container{
+    width: 45vw !important;
+    height: 30vw !important;
+}
+.pt-video{
+    padding-top: 2rem !important;
+} 
+.ratio::before{
+    display: inline !important;
+}
+.bg-attacco-sveglia{
+    background: rgb(210,187,207);
+    background: -moz-linear-gradient(207deg, rgba(210,187,207,1) 0%, rgba(213,60,213,1) 100%);
+    background: -webkit-linear-gradient(207deg, rgba(210,187,207,1) 0%, rgba(213,60,213,1) 100%);
+    background: linear-gradient(207deg, rgba(210,187,207,1) 0%, rgba(213,60,213,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d2bbcf",endColorstr="#d53cd5",GradientType=1);  
+}
+.video-container{
+    margin-right: auto;
+    margin-left: auto;
+}
+.f1-custom{
+    font-size: 1.8vw;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.cable-top-l{
+    width: 15.55vw !important;
+    height: auto !important;
+    left: -15.6vw !important;
+    top: 2vw !important;
+}
+.cable-mid-l{
+    width: 15.55vw !important;
+    height: auto !important;
+    left: -15.6vw !important;
+    top: 14vw !important;
+}
+.cable-bot-l{
+    width: 19.5vw !important;
+    height: auto !important;
+    left: -19.6vw !important;
+    top: 24vw !important;
+}
+.cable-top-r{
+    width: 15.5vw !important;
+    height: auto !important;
+    right: -15.6vw !important;
+    left: auto !important;
+    top: 2vw !important;
+    transform: scaleX(-1);
+}
+.cable-mid-r{
+    width: 15.5vw !important;
+    height: auto !important;
+    right: -15.6vw !important;
+    left: auto !important;
+    top: 14vw !important;
+    transform: scaleX(-1);
+}
+.cable-bot-r{
+    width: 19.4vw !important;
+    height: auto !important;
+    right: -19.45vw !important;
+    left: auto !important;
+    top: 24vw !important;
+    transform: scaleX(-1);
+}
+
+.cable-video{
+    width: 0.7vw !important;
+    height: auto !important;
+    right: 22vw !important;
+    left: auto !important;
+    top: 29.8vw !important;
+}
+
+.cable0 {
+    width: 0.6rem !important;
+    height: 9vw !important;
+    right: 6rem !important;
+    left: auto !important;
+}
+.cable {
+    width: 0.6rem !important;
+    height: 9vw !important;
+    right: 49.3vw  !important;
+    left: auto !important;
+
+}
+.cable-1 {
+    top: -2vw !important;
+}
+.cable-2 {
+    top: -3vw !important;
+}
+.cable-3 {
+    top: calc(2rem + 3vw) !important;
+}
+.cable-4 {
+    top: calc(4.1rem + 9vw) !important;
+}
+
+@media (min-width: 992px) { 
+    .btn-gap-y{
+        row-gap: 8vw;
+    }
+
+    .btn-group{
+        align-items: center;
+    }
+
+    .btn-px{
+        padding-left: inherit !important;
+        padding-right: inherit !important;
+    }
+    
+    .f1-custom{
+        font-size: 2vw;
+    }
+ }
+
