@@ -1,4 +1,5 @@
 import UtilitySection from "../components/UtilitySection";
+import GuaranteeSection from "../components/GuaranteeSection";
 
 const Home = () => {
     // Questa sarà La pagina Home che conterrà i segienti componenti:
@@ -8,6 +9,7 @@ const Home = () => {
     return ( 
         <>
             <UtilitySection />
+            <GuaranteeSection />
         </>
      );
 }

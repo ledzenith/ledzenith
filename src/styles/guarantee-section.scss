@@ -1,0 +1,19 @@
+.fs-guarantee-icon {
+    font-size: 5rem;
+}
+
+@media (max-width: 992px) {
+    .carousel {
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .carousel i {
+        display: flex;
+        flex: 20%;
+        justify-content: center;
+        margin: 2rem;
+    }
+}
