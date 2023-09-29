@@ -57,10 +57,14 @@
 }
 
 .btn {
-    min-width: 200px;
+    min-width: 80px;
     color: none;
     max-width: 350px;
 }
+
+.min-size-btn{
+    min-width: 200px !important;
+} 
 
 .btn-px{
     padding-left: 3rem !important;
@@ -112,8 +116,8 @@
 }
 
 .size-video-container{
-    width: 45vw !important;
-    height: 30vw !important;
+    width: 80vw !important;
+    height: 50vw !important;
 }
 .pt-video{
     padding-top: 2rem !important;
@@ -133,58 +137,58 @@
     margin-left: auto;
 }
 .f1-custom{
-    font-size: 1.8vw;
+    font-size: 3.2vw;
     text-align: center;
     padding: 0.5rem;
 }
 
 .cable-top-l{
-    width: 15.55vw !important;
+    width: 15.4vw !important;
     height: auto !important;
-    left: -15.6vw !important;
+    left: -15.4vw !important;
     top: 2vw !important;
 }
 .cable-mid-l{
-    width: 15.55vw !important;
+    width: 15.4vw !important;
     height: auto !important;
-    left: -15.6vw !important;
-    top: 14vw !important;
+    left: -15.4vw !important;
+    top: 14.5vw !important;
 }
 .cable-bot-l{
-    width: 19.5vw !important;
+    width: 19.3vw !important;
     height: auto !important;
-    left: -19.6vw !important;
-    top: 24vw !important;
+    left: -19.35vw !important;
+    top: 25.5vw !important;
 }
 .cable-top-r{
-    width: 15.5vw !important;
+    width: 15.23vw !important;
     height: auto !important;
-    right: -15.6vw !important;
+    right: -15.2vw !important;
     left: auto !important;
     top: 2vw !important;
     transform: scaleX(-1);
 }
 .cable-mid-r{
-    width: 15.5vw !important;
+    width: 15.3vw !important;
     height: auto !important;
-    right: -15.6vw !important;
+    right: -15.3vw !important;
     left: auto !important;
-    top: 14vw !important;
+    top: 14.5vw !important;
     transform: scaleX(-1);
 }
 .cable-bot-r{
-    width: 19.4vw !important;
+    width: 19.2vw !important;
     height: auto !important;
-    right: -19.45vw !important;
+    right: -19.25vw !important;
     left: auto !important;
-    top: 24vw !important;
+    top: 25.5vw !important;
     transform: scaleX(-1);
 }
 
 .cable-video{
     width: 0.7vw !important;
     height: auto !important;
-    right: 22vw !important;
+    right: 22.05vw !important;
     left: auto !important;
     top: 29.8vw !important;
 }
@@ -215,6 +219,13 @@
     top: calc(4.1rem + 9vw) !important;
 }
 
+
+img{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
 @media (min-width: 992px) { 
     .btn-gap-y{
         row-gap: 8vw;
@@ -231,6 +242,10 @@
     
     .f1-custom{
         font-size: 2vw;
+    }
+    .size-video-container{
+        width: 45vw !important;
+        height: 30vw !important;
     }
  }
 
