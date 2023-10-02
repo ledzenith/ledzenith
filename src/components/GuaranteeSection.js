@@ -16,7 +16,8 @@ const GuaranteeSection = () => {
     return ( 
         <>
         <div className="wrapper bg-light">
-            <h2 className="text-center p-4 text-uppercase title-custom fs-1">Scopri i nostri servizi</h2>
+            <h1 className="text-center mt-4 mb-3 px-5 text-uppercase title-custom fs-1">Scopri i nostri servizi</h1>
+            <i class="arrow bi bi-chevron-left d-none d-lg-flex"></i>
             <div ref={carouselRef} className={`carousel bg-light ${expand ? "expand" : "gradient-guarantee" }`}>
                         <div class="icon-container">
                             <div class="box">
@@ -33,7 +34,7 @@ const GuaranteeSection = () => {
                         <div class="icon-container">
                             <div class="box">
                                 <i className="bi bi-truck fs-guarantee-icon"></i>
-                                <h5>Spedizioni <br></br>gratuite</h5>
+                                <h5>Spedizioni gratuite</h5>
                             </div>
                         </div>
                         <div class="icon-container">
@@ -52,6 +53,7 @@ const GuaranteeSection = () => {
                             <div class="invisible-box d-lg-none"><i></i></div>
                         </div>
             </div>
+            <i class="arrow bi bi-chevron-right d-none d-lg-flex"></i>
             <span className="expander d-flex justify-content-center align-items-center fw-bolder fs-6 d-lg-none"> <u onClick={() => handleExpansion()}> {expand ? "riduci": "espandi"} </u> </span>
         </div>
         </>
