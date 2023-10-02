@@ -2,18 +2,69 @@
     font-size: 5rem;
 }
 
+.box{
+   border: 2px solid #808080;
+   background: rgb(226,226,226);
+   background: -moz-radial-gradient(circle, rgba(226,226,226,1) 0%, rgba(128,128,128,1) 100%);
+   background: -webkit-radial-gradient(circle, rgba(226,226,226,1) 0%, rgba(128,128,128,1) 100%);
+   background: radial-gradient(circle, rgba(226,226,226,1) 0%, rgba(128,128,128,1) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2e2e2",endColorstr="#808080",GradientType=1);
+   box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.1);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   flex-wrap: wrap;
+}
+.invisible-box,.box{
+   max-width: 11rem;
+   min-width: 11rem;
+   min-height: 11rem;
+   max-height: 11rem;
+   margin: 1rem;
+} 
+
+.box h5{
+    color: whitesmoke;
+}
+
+.box:hover{
+    cursor: pointer;
+}
+
+.title-custom{
+    letter-spacing: 0.3rem;
+    line-height: 2.8rem;
+}
+
 @media (max-width: 992px) {
     .carousel {
         display: flex;
-        justify-content: center ;
-        align-items: center;
         flex-wrap: wrap;
+        height: 18rem;
+        overflow: hidden;
     }
     
-    .carousel i {
+    .carousel .icon-container{
         display: flex;
-        flex: 20%;
+        flex: 30%;
         justify-content: center;
-        margin: 2rem;
+    }
+
+    .expander u:hover{
+       cursor: pointer;
+    }
+
+    .expand{
+        height: 26rem !important;
+        overflow-y: scroll;
+    }
+    
+    .gradient-guarantee{
+        background: rgb(255,255,255);
+        background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(171,171,171,0.8547794117647058) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(171,171,171,0.8547794117647058) 100%);
+        background: linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(171,171,171,0.8547794117647058) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ababab",GradientType=1);       
     }
 }
