@@ -9,15 +9,11 @@
    text-align: center;
    flex-wrap: wrap;
    flex-direction: column;
-
-   border: 2px solid #808080;
-   border-radius: 4%;
-   box-shadow: none;
-   background: rgb(226,226,226);
-   background: -moz-radial-gradient(circle, rgba(226,226,226,1) 0%, rgba(128,128,128,1) 100%);
-   background: -webkit-radial-gradient(circle, rgba(226,226,226,1) 0%, rgba(128,128,128,1) 100%);
-   background: radial-gradient(circle, rgba(226,226,226,1) 0%, rgba(128,128,128,1) 100%);
-   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2e2e2",endColorstr="#808080",GradientType=1);
+   
+   border-radius: 50px;
+    background: #4e5255;
+    box-shadow: inset -20px -20px 60px #424648,
+                inset 20px 20px 60px #5a5e62;
 }
 .invisible-box,.box{
    max-width: 14rem;
@@ -30,6 +26,9 @@
 .box h5{
     color: whitesmoke;
     padding: 0 0.1rem;
+}
+.box i{
+    color: whitesmoke;
 }
 
 .box:hover{
@@ -44,7 +43,8 @@
 .carousel{
     display: flex;
     overflow: hidden;
-    max-width: 55rem; 
+    max-width: 55rem;
+    user-select: none;
 }
 .smooth-scroll {
     scroll-behavior: smooth;
@@ -71,8 +71,6 @@
     align-items: center;
     flex-direction: column;
 }
-
-
 
 @media (max-width: 992px) {
     .carousel {
