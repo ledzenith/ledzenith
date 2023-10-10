@@ -1,6 +1,9 @@
-    import { useEffect, useState } from "react";
-    import "../styles/guarantee-section.scss"
-    import { useRef } from "react";
+import { useEffect, useState, useRef } from "react";
+import "../styles/guarantee-section.scss"
+import  Modal  from "./Modal";
+
+import { testoReso, testoSpedizione, testoClienti, testoTempi, testoPagamento } from "../assets/Testi";
+
 
     const GuaranteeSection = () => {
         // Banner che contiene le immagini di garanzia(reso, spedizione gratuita, tempo di spedizione, etc..), 
@@ -139,32 +142,37 @@
                                                                                                                         onMouseDown={handlePress}  onMouseMove={handleMove} onMouseUp={handleOut}  onMouseLeave={handleOut}> 
                                                                                                                         
                                 <div className="icon-container" onMouseOut={handlePropagation}>
-                                    <div className="box" >
-                                        <i className="bi bi-box2 fs-guarantee-icon"></i> 
+                                    <div className="box" data-bs-toggle="modal" data-bs-target="#resoModal">
+                                        <i className="bi bi-box2 fs-guarantee-icon"></i>
+                                        <Modal key={0} title={"Politica di reso"} text={testoReso} modalId={"resoModal"}/> 
                                         <h5>Politica di reso</h5>
                                     </div>
                                 </div>
                                 <div className="icon-container" onMouseOut={handlePropagation}>
-                                    <div className="box" >
+                                    <div className="box" data-bs-toggle="modal" data-bs-target="#tempiModal">
                                         <i className="bi bi-clock fs-guarantee-icon" ></i>
+                                        <Modal key={1} title={"Tempi di spedizione"} text={testoTempi} modalId={"tempiModal"}/>
                                         <h5 >Tempi di spedizione</h5>
                                     </div>
                                 </div>
                                 <div className="icon-container" onMouseOut={handlePropagation}>
-                                    <div className="box" >
-                                        <i className="bi bi-truck fs-guarantee-icon" ></i>
+                                    <div className="box" data-bs-toggle="modal" data-bs-target="#spedizioneModal">
+                                        <i className="bi bi-truck fs-guarantee-icon"></i>
+                                        <Modal key={2} title={"Spedizioni gratuite"} text={testoSpedizione} modalId={"spedizioneModal"}/>
                                         <h5 >Spedizioni gratuite</h5>
                                     </div>
                                 </div>
                                 <div className="icon-container" onMouseOut={handlePropagation}>
-                                    <div className="box" >
-                                        <i className="bi bi-person-check fs-guarantee-icon" ></i>
+                                    <div className="box" data-bs-toggle="modal" data-bs-target="#clientiModal">
+                                        <i className="bi bi-person-check fs-guarantee-icon"></i>
+                                        <Modal key={3} title={"Servizio clienti"} text={testoClienti} modalId={"clientiModal"}/>
                                         <h5 >Servizio clienti</h5>
                                     </div>
                                 </div>
                                 <div className="icon-container" onMouseOut={handlePropagation}>
-                                    <div className="box" >
-                                        <i className="bi bi-cash-coin fs-guarantee-icon" ></i>
+                                    <div className="box" data-bs-toggle="modal" data-bs-target="#pagamentiModal">
+                                        <i className="bi bi-cash-coin fs-guarantee-icon"></i>
+                                        <Modal key={4} title={"Metodi di pagamento"} text={testoPagamento} modalId={"pagamentiModal"}/>
                                         <h5 >Metodi di pagamento</h5>
                                     </div>
                                 </div>
