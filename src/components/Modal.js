@@ -1,7 +1,7 @@
 const Modal = ({ title, text, modalId}) => {
     return ( 
         
-    <div className="modal fade" id={modalId} data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div className="modal fade" id={modalId} data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content">
             <div className="modal-header">
@@ -13,7 +13,6 @@ const Modal = ({ title, text, modalId}) => {
             </div>
             <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" className="btn btn-primary">Understood</button>
             </div>
             </div>
         </div>

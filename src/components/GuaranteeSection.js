@@ -10,6 +10,8 @@ import { testoReso, testoSpedizione, testoClienti, testoTempi, testoPagamento } 
         // al click delle immagini si apre un popup che mostra la descrizione della garanzia
         const [expand, setExpand] = useState(false)
         const [press, setPress] = useState(false)
+        const [hasScrolled, setHasScrolled] = useState(false);
+        const [canShowModal, setCanShowModal] = useState(false);
         const [prevPageX, setPrevPageX] = useState(null); 
         const [prevScrollLeft, setPrevScrollLeft] = useState(null);
         const [currentIndex, setCurrentIndex] = useState(1);
@@ -38,8 +40,10 @@ import { testoReso, testoSpedizione, testoClienti, testoTempi, testoPagamento } 
         function handleMove(e){
             const scrollWidth = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
             if(press){
-                let positionDiff = e.clientX - prevPageX;    
-                // let positionDiff = (e.clientX || e.touches[0].clientX) - prevPageX;    
+                let positionDiff = (e.clientX || e.touches[0].clientX) - prevPageX; // aggiunzione compatibilità touches   
+                if(Math.abs(positionDiff) > 0){
+                    setHasScrolled(true)
+                }   
                 carouselRef.current.scrollLeft = prevScrollLeft - positionDiff;
                 if(carouselRef.current.scrollLeft === 0){
                     arrowLeft.current.classList.add("invisible") 
@@ -85,7 +89,7 @@ import { testoReso, testoSpedizione, testoClienti, testoTempi, testoPagamento } 
 
         function handlePress(e){
             setPrevPageX(e.clientX);
-            // setPrevPageX(e.clientX || e.touches[0].clientX); 
+            setPrevPageX(e.clientX || e.touches[0].clientX); // aggiunzione compatibilità touches
             setPrevScrollLeft(carouselRef.current.scrollLeft);
             setPress(true);
         }
@@ -93,6 +97,7 @@ import { testoReso, testoSpedizione, testoClienti, testoTempi, testoPagamento } 
 
         function handleOut(e){
             setPress(false);
+            setHasScrolled(false);
         }
 
 
@@ -128,7 +133,13 @@ import { testoReso, testoSpedizione, testoClienti, testoTempi, testoPagamento } 
             e.stopPropagation(); 
           }
         
-        
+        function handleMouseUp(e){
+            if (hasScrolled) {
+                setCanShowModal(false)
+              } else {
+                setCanShowModal(true)
+              }
+        }
 
 
         // JSX
@@ -142,35 +153,35 @@ import { testoReso, testoSpedizione, testoClienti, testoTempi, testoPagamento } 
                                                                                                                         onMouseDown={handlePress}  onMouseMove={handleMove} onMouseUp={handleOut}  onMouseLeave={handleOut}> 
                                                                                                                         
                                 <div className="icon-container" onMouseOut={handlePropagation}>
-                                    <div className="box" data-bs-toggle="modal" data-bs-target="#resoModal">
+                                    <div className="box" onMouseUp={handleMouseUp} data-bs-toggle={canShowModal ? "modal" : ""} data-bs-target="#resoModal">
                                         <i className="bi bi-box2 fs-guarantee-icon"></i>
                                         <Modal key={0} title={"Politica di reso"} text={testoReso} modalId={"resoModal"}/> 
                                         <h5>Politica di reso</h5>
                                     </div>
                                 </div>
                                 <div className="icon-container" onMouseOut={handlePropagation}>
-                                    <div className="box" data-bs-toggle="modal" data-bs-target="#tempiModal">
+                                    <div onMouseUp={handleMouseUp} className="box" data-bs-toggle={canShowModal ? "modal" : ""} data-bs-target="#tempiModal">
                                         <i className="bi bi-clock fs-guarantee-icon" ></i>
                                         <Modal key={1} title={"Tempi di spedizione"} text={testoTempi} modalId={"tempiModal"}/>
                                         <h5 >Tempi di spedizione</h5>
                                     </div>
                                 </div>
                                 <div className="icon-container" onMouseOut={handlePropagation}>
-                                    <div className="box" data-bs-toggle="modal" data-bs-target="#spedizioneModal">
+                                    <div className="box" onMouseUp={handleMouseUp} data-bs-toggle={canShowModal ? "modal" : ""} data-bs-target="#spedizioneModal">
                                         <i className="bi bi-truck fs-guarantee-icon"></i>
                                         <Modal key={2} title={"Spedizioni gratuite"} text={testoSpedizione} modalId={"spedizioneModal"}/>
                                         <h5 >Spedizioni gratuite</h5>
                                     </div>
                                 </div>
                                 <div className="icon-container" onMouseOut={handlePropagation}>
-                                    <div className="box" data-bs-toggle="modal" data-bs-target="#clientiModal">
+                                    <div className="box" onMouseUp={handleMouseUp} data-bs-toggle={canShowModal ? "modal" : ""} data-bs-target="#clientiModal">
                                         <i className="bi bi-person-check fs-guarantee-icon"></i>
                                         <Modal key={3} title={"Servizio clienti"} text={testoClienti} modalId={"clientiModal"}/>
                                         <h5 >Servizio clienti</h5>
                                     </div>
                                 </div>
                                 <div className="icon-container" onMouseOut={handlePropagation}>
-                                    <div className="box" data-bs-toggle="modal" data-bs-target="#pagamentiModal">
+                                    <div className="box" onMouseUp={handleMouseUp} data-bs-toggle={canShowModal ? "modal" : ""} data-bs-target="#pagamentiModal">
                                         <i className="bi bi-cash-coin fs-guarantee-icon"></i>
                                         <Modal key={4} title={"Metodi di pagamento"} text={testoPagamento} modalId={"pagamentiModal"}/>
                                         <h5 >Metodi di pagamento</h5>
