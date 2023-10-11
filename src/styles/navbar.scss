@@ -1,0 +1,10 @@
+.navbar-nav .nav-item:last-child .nav-link{
+    margin-right: 2rem;
+}
+.bg-nav-gradient{
+    background: rgb(43,48,51);
+    background: -moz-linear-gradient(0deg, rgba(43,48,51,1) 0%, rgba(61,61,61,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(43,48,51,1) 0%, rgba(61,61,61,1) 100%);
+    background: linear-gradient(0deg, rgba(43,48,51,1) 0%, rgba(61,61,61,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b3033",endColorstr="#3d3d3d",GradientType=1);
+}

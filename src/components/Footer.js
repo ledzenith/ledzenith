@@ -3,7 +3,8 @@ const Footer = () => {
     // Copyright, Privacy Policy, Cookie Policy, Email, Social  
     
     return ( 
-        pass
+        <>
+        </>
      );
 }
  

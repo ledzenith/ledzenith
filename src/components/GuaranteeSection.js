@@ -170,7 +170,7 @@ import { testoReso, testoSpedizione, testoClienti, testoTempi, testoPagamento } 
                                     <div className="box" onMouseUp={handleMouseUp} data-bs-toggle={canShowModal ? "modal" : ""} data-bs-target="#spedizioneModal">
                                         <i className="bi bi-truck fs-guarantee-icon"></i>
                                         <Modal key={2} title={"Spedizioni gratuite"} text={testoSpedizione} modalId={"spedizioneModal"}/>
-                                        <h5 >Spedizioni gratuite</h5>
+                                        <h5 >Spedizioni<br/>gratuite</h5>
                                     </div>
                                 </div>
                                 <div className="icon-container" onMouseOut={handlePropagation}>
