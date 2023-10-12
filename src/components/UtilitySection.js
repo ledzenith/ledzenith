@@ -185,7 +185,7 @@ const UtilitySection = () => {
     return (          
                 <div className="container-fluid bg-utility-custom bg-gradient position-relative">
                         <div className="row d-block d-lg-flex align-items-center white">
-                            <div ref={utilitySectionRef} className={((window.innerWidth > 992) ? "vh-100 " : "") + "video-container order-2 col-6 d-flex flex-column justify-content-center align-items-center w-50 pt-video "}>
+                            <div id="utility-section" ref={utilitySectionRef} className={((window.innerWidth > 992) ? "vh-100 " : "") + "video-container order-2 col-6 d-flex flex-column justify-content-center align-items-center w-50 pt-video "}>
                                     <div className={ (btnSvegliaClick ? "border-sveglia" : btnLuciClick ? "border-luci" : btnMusicaClick ? "border-musica" : btnWirelessClick ? "border-wireless" : btnAppClick ? "border-app" : btnRisveglioClick ? "border-risveglio" : btnVideoClick ? "border-video" :  "") + 
                                                      " size-video-container border-2 rounded-1 ratio ratio-4x3 position-relative border-solid"}>
 

@@ -9,6 +9,8 @@ const Home = () => {
     // 1- UpperMenu, 2- UtilitySection, 3- GuaranteeSection, 4- ProductSection
     // 5- Carousel, 6- Footer
     const [isScrolling, setIsScrolling] = useState(false)
+    const [isMouseTop, setIsMouseTop] = useState(false)
+
 
     useEffect(() => {
         let timeout;
@@ -19,13 +21,21 @@ const Home = () => {
           clearTimeout(timeout);
           timeout = setTimeout(() => {
             setIsScrolling(false);
-          }, 2000);
+          }, 1500);
+        }
+
+        function handleMouseMove(e){
+          if( e.clientY < 35 ){
+            setIsMouseTop(true)
+          } else {setIsMouseTop(false)}
         }
     
         window.addEventListener("scroll", handleScroll);
-    
+        window.addEventListener("mousemove", handleMouseMove);
+            
         return () => {
           window.removeEventListener("scroll", handleScroll);
+          window.removeEventListener("mousemove", handleMouseMove);
           clearTimeout(timeout);
         };
       }, []);
@@ -33,7 +43,7 @@ const Home = () => {
 
     return ( 
         <>
-            <UpperMenu isScrolling={isScrolling}/>
+            <UpperMenu isScrolling={isScrolling} isMouseTop={isMouseTop}/>
             <UtilitySection />
             <GuaranteeSection />
             <Footer />

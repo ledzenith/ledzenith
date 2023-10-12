@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import '../styles/navbar.scss';
+import '../styles/upper-menu.scss';
 
-const UpperMenu = ({isScrolling}) => {
+const UpperMenu = ({isScrolling, isMouseTop}) => {
     // Questo sarà il menu superiore dell' Homepage con i seguenti elementi:
     // 1- Logo, 2- Promo, 3- Prodotti, 4- Servizio Clienti, 5- Img Carrello
     const [isHover, setIsHover] = useState(false)
@@ -14,27 +14,28 @@ const UpperMenu = ({isScrolling}) => {
     }
 
     return ( 
-        <nav onMouseOver={handleHover} onMouseLeave={handleLeave} class={"navbar navbar-expand-lg bg-nav-gradient border-bottom border-body fixed-top " + ((isScrolling || isHover) ? "d-block" : " d-none")} data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand ms-3" href="#">LedZenith</a>
+        <nav onMouseOver={handleHover} onMouseLeave={handleLeave} className={"navbar navbar-expand-lg bg-nav-gradient border-bottom border-body "+ ((window.innerWidth > 992) ? "fixed-top" : "") + ((isScrolling || isHover || isMouseTop) ? " d-block" : " d-none")} data-bs-theme="dark">
+            <div className="container-fluid">
+                <a className="navbar-brand ms-3" href="#utility-section">LedZenith</a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                    <ul class="navbar-nav gap-4">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Promo</a>
+                <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul className="navbar-nav gap-4">
+                        <li className="nav-item">
+                            <a className="nav-link" href="#promo-section">Promo</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Prodotti</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#product-section">Prodotti</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Servizi</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#guarantee-section">Servizi</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link p-0" href="#"><i class="bi bi-cart fs-4 p-1"></i></a>
+                        <li className="nav-item">
+                            <div className="nav-link p-0 cursor-pointer"><i className="bi bi-cart fs-4 p-1"></i></div>
+                            {/* aggiungere modale entrante da destra per il carrello */}
                         </li>
                     </ul>
                 </div>
