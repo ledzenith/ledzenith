@@ -10,18 +10,20 @@ const Home = () => {
     // 5- Carousel, 6- Footer
     const [isScrolling, setIsScrolling] = useState(false)
     const [isMouseTop, setIsMouseTop] = useState(false)
+    const [scrollY, setScrollY] = useState(null)
 
 
     useEffect(() => {
         let timeout;
-    
-        function handleScroll() {
-          setIsScrolling(true);
-    
-          clearTimeout(timeout);
-          timeout = setTimeout(() => {
-            setIsScrolling(false);
-          }, 1500);
+        
+        function handleScroll(e) {
+          console.log(isScrolling)
+          if(scrollY > window.scrollY){
+            setIsScrolling(true);
+          } else {
+            setIsScrolling(false)
+          }
+          setScrollY(window.scrollY)
         }
 
         function handleMouseMove(e){
@@ -32,13 +34,18 @@ const Home = () => {
     
         window.addEventListener("scroll", handleScroll);
         window.addEventListener("mousemove", handleMouseMove);
-            
+
+        clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            setIsScrolling(false);
+          }, 1500);
+
         return () => {
           window.removeEventListener("scroll", handleScroll);
           window.removeEventListener("mousemove", handleMouseMove);
           clearTimeout(timeout);
         };
-      }, []);
+      }, [scrollY, isScrolling]);
 
 
     return ( 

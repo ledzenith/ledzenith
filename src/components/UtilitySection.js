@@ -176,7 +176,6 @@ const UtilitySection = () => {
             if(id === "video"){
                 bgColor = btnSvegliaClick ? "bg-color-sveglia" : btnLuciClick ? "bg-color-luci" : btnMusicaClick ? "bg-color-musica" : btnWirelessClick ? "bg-color-wireless" : btnAppClick ? "bg-color-app" : btnRisveglioClick ? "bg-color-risveglio" : `bg-color-${id}`
             }
-            console.log(bgColor)
             return bgColor 
 
         } else{return `bg-color-${id}`}

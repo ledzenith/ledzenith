@@ -149,9 +149,8 @@ import { testoReso, testoSpedizione, testoClienti, testoTempi, testoPagamento } 
                 <i ref={arrowLeft} onClick={()=> handleClick(0)} className="arrow bi bi-chevron-left d-none d-lg-flex"></i>
                 <div className="main-container">
                     <h1 className="guarantee-title text-center mb-5 px-5 text-uppercase title-custom fs-1 position-relative">Scopri i nostri servizi</h1>
-                    <div ref={carouselRef} className={`carousel bg-light ${expand ? "expand" : "gradient-guarantee" }`} onTouchStart={handlePress} onTouchMove={handleMove} onTouchEnd={handleOut} 
-                                                                                                                        onMouseDown={handlePress}  onMouseMove={handleMove} onMouseUp={handleOut}  onMouseLeave={handleOut}> 
-                                                                                                                        
+                    <div ref={carouselRef} className={`carousel bg-light ${expand ? "expand" : " gradient-guarantee" } ${(window.innerWidth < 992) ? " carousel-responsive" : "" } `} onTouchStart={handlePress} onTouchMove={handleMove} onTouchEnd={handleOut} 
+                                                                                                                        onMouseDown={handlePress}  onMouseMove={handleMove} onMouseUp={handleOut}  onMouseLeave={handleOut}>                                                                                       
                                 <div className="icon-container" onMouseOut={handlePropagation}>
                                     <div className="box" onMouseUp={handleMouseUp} data-bs-toggle={canShowModal ? "modal" : ""} data-bs-target="#resoModal">
                                         <i className="bi bi-box2 fs-guarantee-icon"></i>

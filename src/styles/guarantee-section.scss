@@ -95,10 +95,12 @@
     }
 
     .expand{
-        height: 26rem !important;
         overflow-y: scroll;
     }
-    
+    .carousel-responsive{
+        width: 90%;
+    }
+
     .gradient-guarantee{
         background: rgb(255,255,255);
         background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(171,171,171,0.8547794117647058) 100%);

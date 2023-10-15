@@ -14,7 +14,7 @@ const UpperMenu = ({isScrolling, isMouseTop}) => {
     }
 
     return ( 
-        <nav onMouseOver={handleHover} onMouseLeave={handleLeave} className={"navbar navbar-expand-lg bg-nav-gradient border-bottom border-body "+ ((window.innerWidth > 992) ? "fixed-top" : "") + ((isScrolling || isHover || isMouseTop) ? " d-block" : " d-none")} data-bs-theme="dark">
+        <nav onMouseOver={handleHover} onMouseLeave={handleLeave} className={"navbar navbar-expand-lg bg-nav-gradient border-bottom border-body"+ ((isScrolling || isHover || isMouseTop) ? " d-block fixed-top" : " d-none")} data-bs-theme="dark">
             <div className="container-fluid">
                 <a className="navbar-brand ms-3" href="#utility-section">LedZenith</a>
 
