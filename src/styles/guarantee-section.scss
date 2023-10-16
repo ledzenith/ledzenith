@@ -55,14 +55,14 @@
     justify-content: center;
     align-items: center;
     max-width: 100%;
-    height: 500px;
+    padding: 8rem 0;
 }
 .wrapper .arrow{
     position: relative;
     cursor: pointer;
     font-size: 2rem;
     z-index: 1;
-    top: 3rem;
+    top: 4.5rem;
 }
 
 .main-container{
@@ -74,6 +74,8 @@
 .guarantee-title{
     bottom: 1rem;
 }
+
+
 
 @media (max-width: 992px) {
     .carousel {

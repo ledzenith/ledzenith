@@ -19,7 +19,7 @@ const UpperMenu = ({isScrolling, isMouseTop}) => {
                 <a className="navbar-brand ms-3" href="#utility-section">LedZenith</a>
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon"></span>
                 </button>
 
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">

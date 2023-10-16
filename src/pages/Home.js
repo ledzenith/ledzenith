@@ -3,6 +3,7 @@ import GuaranteeSection from "../components/GuaranteeSection";
 import UpperMenu from "../components/UpperMenu";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
+import AboutUs from "../components/AboutUs";
 
 const Home = () => {
     // Questa sarà La pagina Home che conterrà i seguenti componenti:
@@ -15,9 +16,9 @@ const Home = () => {
 
     useEffect(() => {
         let timeout;
-        
-        function handleScroll(e) {
-          console.log(isScrolling)
+      
+        function handleScroll() { // apparizione Navbar allo scroll
+          console.log(scrollY, window.scrollY)
           if(scrollY > window.scrollY){
             setIsScrolling(true);
           } else {
@@ -26,7 +27,7 @@ const Home = () => {
           setScrollY(window.scrollY)
         }
 
-        function handleMouseMove(e){
+        function handleMouseMove(e){ // apparizione navabar con mouse in alto
           if( e.clientY < 35 ){
             setIsMouseTop(true)
           } else {setIsMouseTop(false)}
@@ -51,8 +52,9 @@ const Home = () => {
     return ( 
         <>
             <UpperMenu isScrolling={isScrolling} isMouseTop={isMouseTop}/>
-            <UtilitySection />
-            <GuaranteeSection />
+            <UtilitySection/>
+            <AboutUs></AboutUs>
+            <GuaranteeSection/>
             <Footer />
         </>
      );
