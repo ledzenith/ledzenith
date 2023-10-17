@@ -18,7 +18,6 @@ const Home = () => {
         let timeout;
       
         function handleScroll() { // apparizione Navbar allo scroll
-          console.log(scrollY, window.scrollY)
           if(scrollY > window.scrollY){
             setIsScrolling(true);
           } else {
