@@ -1,6 +1,32 @@
+.about-text h1{
+    font-family:'Roboto Slab', sans-serif;
+    margin-bottom: 0.7rem;
+    font-size: 2.6rem;
+}
+.about-text h5{
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 1.5rem;
+}
+.about-text p{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6em;
+    text-align: justify;
+}
+.about-text a{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-image{
+    width: 25rem;
+}
+
+#about-section{
+    padding: 12vw 6vw;
+}
+
 @media (max-width: 992px) {
     .about-image{
-        width: 50vw;
+        width: 45vw;
         min-width: 280px;
     }
 }
