@@ -97,7 +97,8 @@
     }
 
     .expand{
-        overflow-y: scroll;
+        overflow-y: auto;
+        height: 30rem;
     }
     .carousel-responsive{
         width: 90%;

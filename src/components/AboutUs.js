@@ -3,7 +3,7 @@ import aboutImg from "../assets/img/about-image.svg"
 
 const AboutUs = () => {
     return ( 
-        <div className="about-us d-flex justify-content-around p-5">
+        <div id="about-section" className={"about-us d-flex justify-content-around p-5" + ((window.innerWidth < 992) ? " flex-wrap gap-5" : "")}    >
             <div className="about-text px-3">
                 <h1 className="">Illuminiamo i vostri desideri smart</h1>
                 <h3>Alla ricerca di un modo per portare una nuova luce nella tua vita?</h3> 
@@ -14,7 +14,7 @@ const AboutUs = () => {
                 </a>
             </div>
             <div className="about-image d-flex align-items-center">
-                <img src={aboutImg} alt="" />
+                <img src={aboutImg} alt="Illustrazione" className="about-image"/>
             </div>
         </div>
      );

@@ -25,7 +25,7 @@ const UpperMenu = ({isScrolling, isMouseTop}) => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul className="navbar-nav gap-4">
                         <li className="nav-item">
-                            <a className="nav-link" href="#promo-section">Promo</a>
+                            <a className="nav-link" href="#about-section">Chi Siamo</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#product-section">Prodotti</a>
