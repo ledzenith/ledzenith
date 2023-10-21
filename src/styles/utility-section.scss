@@ -219,7 +219,9 @@
     top: calc(4.1rem + 9vw) !important;
 }
 
-
+.utility-container{
+    padding-bottom: 5rem;
+}
 img{
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -227,6 +229,9 @@ img{
 }
 
 @media (min-width: 992px) { 
+    .utility-container{
+        padding-bottom: 0rem;
+    }
     .btn-gap-y{
         row-gap: 8vw;
     }

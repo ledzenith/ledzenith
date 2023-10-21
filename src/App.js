@@ -9,7 +9,7 @@ import WorkinProgress from "./components/WorkInProgress";
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter >
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route path="/soon" element={<WorkinProgress/>}/>
