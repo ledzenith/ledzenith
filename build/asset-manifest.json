@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ledzenith/static/css/main.7741b4cf.css",
-    "main.js": "/ledzenith/static/js/main.84cb5f4a.js",
+    "main.js": "/ledzenith/static/js/main.4c4bcbe8.js",
     "static/js/787.5162628c.chunk.js": "/ledzenith/static/js/787.5162628c.chunk.js",
     "static/media/videoProduct.mp4": "/ledzenith/static/media/videoProduct.87fa7447ad49ba055088.mp4",
     "static/media/about-image.svg": "/ledzenith/static/media/about-image.1d33fb8a8732a76868432c187dba91a4.svg",
@@ -16,11 +16,11 @@
     "static/media/top-wire.png": "/ledzenith/static/media/top-wire.4a3b6cf7106e114c4d2a.png",
     "index.html": "/ledzenith/index.html",
     "main.7741b4cf.css.map": "/ledzenith/static/css/main.7741b4cf.css.map",
-    "main.84cb5f4a.js.map": "/ledzenith/static/js/main.84cb5f4a.js.map",
+    "main.4c4bcbe8.js.map": "/ledzenith/static/js/main.4c4bcbe8.js.map",
     "787.5162628c.chunk.js.map": "/ledzenith/static/js/787.5162628c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7741b4cf.css",
-    "static/js/main.84cb5f4a.js"
+    "static/js/main.4c4bcbe8.js"
   ]
 }
