@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.afe4e65d.css",
+    "main.js": "/static/js/main.26921cef.js",
+    "static/js/787.5162628c.chunk.js": "/static/js/787.5162628c.chunk.js",
+    "static/media/videoProduct.mp4": "/static/media/videoProduct.87fa7447ad49ba055088.mp4",
+    "static/media/about-image.svg": "/static/media/about-image.1d33fb8a8732a76868432c187dba91a4.svg",
+    "static/media/work-in-progress.png": "/static/media/work-in-progress.ad92c47044cd97d05676.png",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.449ad8adf6ae0424b7ed.woff",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.dea24bf5a7646d8b84e7.woff2",
+    "static/media/bot-wire-active-left.png": "/static/media/bot-wire-active-left.d61b3ad169e78b313831.png",
+    "static/media/bot-wire-active-right.png": "/static/media/bot-wire-active-right.ca99d6bc0e5ae9958b10.png",
+    "static/media/bot-wire.png": "/static/media/bot-wire.91c71452c4d09dfd9720.png",
+    "static/media/top-wire-active-right.png": "/static/media/top-wire-active-right.0a4b00dea18af523c819.png",
+    "static/media/top-wire-active-left.png": "/static/media/top-wire-active-left.e62e7ca0e6bc84ab0cec.png",
+    "static/media/top-wire.png": "/static/media/top-wire.4a3b6cf7106e114c4d2a.png",
+    "index.html": "/index.html",
+    "main.afe4e65d.css.map": "/static/css/main.afe4e65d.css.map",
+    "main.26921cef.js.map": "/static/js/main.26921cef.js.map",
+    "787.5162628c.chunk.js.map": "/static/js/787.5162628c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.afe4e65d.css",
+    "static/js/main.26921cef.js"
+  ]
+}
