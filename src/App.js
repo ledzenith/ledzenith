@@ -1,5 +1,5 @@
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from './pages/Home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './customStyle.scss';
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,12 +9,12 @@ import WorkinProgress from "./components/WorkInProgress";
 
 function App() {
   return (
-      <Router>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route exact path="/ledzenith/" element={<Home/>}/>
-          <Route path="/ledzenith/soon" element={<WorkinProgress/>}/>
+          <Route exact path="/" element={<Home/>}/>
+          <Route path="/soon" element={<WorkinProgress/>}/>
         </Routes>
-      </Router>
+    </BrowserRouter>
   );
 }
 
