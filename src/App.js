@@ -1,4 +1,4 @@
-import {BrowserRouter as  Routes, Route, HashRouter} from "react-router-dom";
+import {BrowserRouter as  Routes, Route, Router} from "react-router-dom";
 import Home from './pages/Home';
 
 import './customStyle.scss';
@@ -9,12 +9,12 @@ import WorkinProgress from "./components/WorkInProgress";
 
 function App() {
   return (
-    <HashRouter>
+    <Router basename="/ledzenith">
         <Routes>
-          <Route path="/" element={<Home/>}/>
+          <Route exact path="/" element={<Home/>}/>
           <Route path="/soon" element={<WorkinProgress/>}/>
         </Routes>
-    </HashRouter>
+    </Router>
   );
 }
 
