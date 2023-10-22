@@ -1,17 +1,17 @@
 
+#about-section h1{
+    font-size: 3.5rem !important;
+}
 .about-text h5{
-    font-family: 'Lato', sans-serif;
     margin-bottom: 3rem;
     font-weight: bold;
 }
 .about-text p{
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6em;
-    font-size: 1.4rem;
+    line-height: 2em;
+    font-size: 1.5rem;
     margin-bottom: 2.5rem;
 }
 .about-text a{
-    font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 2.5rem;
 }
@@ -19,13 +19,27 @@
 .about-image{
     width: 40vw;
     max-width: 32rem;
+    position: relative;
+    top: 2.2rem;
+    left: 1rem;
+    z-index: 2;
+    align-items: flex-end;
 }
 
 #about-section{
-    padding: 8rem 5rem;
+    padding: 5rem 8vw 0 8vw;
 }
+
 .padding-end{
     padding-right: 10vw;
+}
+
+.about-container{
+    margin-top: 4rem;
+}   
+
+.about-text{
+    padding-top: 2rem;
 }
 
 @media (max-width: 992px) {
@@ -33,4 +47,10 @@
         width: 45vw;
         min-width: 280px;
     }
+
+    .about-image{
+        left: 0;
+        top: 1.5rem;
+    }
+
 }

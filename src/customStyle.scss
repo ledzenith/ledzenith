@@ -1,11 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Serif&display=swap');
+
+
 $primary : rgb(3, 247, 3);
 $spacer : 2vw;
 
 h1 {
     font-family: "Roboto Slab", sans-serif !important;
-    margin-bottom: 0.7rem !important;
+    margin-bottom: 1.5rem !important;
     font-size: 3rem !important;
     font-weight: 600 !important;
+    text-align: center;
+}
+
+h5 {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.5rem !important;
+}
+
+p {
+    font-family: "Roboto Serif", serif;
+}
+
+a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif !important;
+    padding: 1rem !important;
 }
 
 @import '~bootstrap/scss/bootstrap.scss';

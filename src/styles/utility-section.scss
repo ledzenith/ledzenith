@@ -57,6 +57,7 @@
 }
 
 .btn {
+    position: relative !important;
     min-width: 80px;
     color: none;
     max-width: 350px;
@@ -85,8 +86,11 @@
 
 .bg-utility-custom {
     background-color: #262b2e !important;
+    background: url("../assets/img/utility-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-
 .border-solid{
     border: solid;
 }
@@ -94,25 +98,32 @@
 
 // Stile Video e Design Attorno
 .border-sveglia{
-    border-color: rgb(212, 23, 212) !important;
+    border-color: rgb(150, 18, 150) !important;
+    background-color: rgb(155, 30, 155) !important;
 }
 .border-luci{
     border-color: rgb(201, 100, 46) !important;
+    background-color: rgb(185, 96, 48) !important;
 }
 .border-musica{
     border-color: rgb(117, 36, 193) !important;
+    background-color: rgb(85, 32, 136) !important;
 }
 .border-wireless{
     border-color: rgb(195, 40, 87) !important;
+    background-color: rgb(145, 43, 73) !important;
 }
 .border-app{
     border-color: rgb(42, 172, 202) !important;
+    background-color: rgb(46, 149, 172) !important;
 }
 .border-risveglio{
-    border-color: rgb(196, 205, 38) !important;
+    border-color: rgb(204, 188, 49) !important;
+    background-color: rgb(179, 169, 41) !important;
 }
 .border-video{
     border-color: rgb(41, 184, 48) !important;
+    background-color: rgb(44, 151, 50) !important;
 }
 
 .size-video-container{
@@ -120,7 +131,7 @@
     height: 50vw !important;
 }
 .pt-video{
-    padding-top: 2rem !important;
+    padding-top: 6rem !important;
 } 
 .ratio::before{
     display: inline !important;
@@ -137,9 +148,15 @@
     margin-left: auto;
 }
 .f1-custom{
-    font-size: 3.2vw;
+    font-size: 3vw !important;
     text-align: center;
     padding: 0.5rem;
+}
+
+.text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cable-top-l{
@@ -193,30 +210,11 @@
     top: 29.8vw !important;
 }
 
-.cable0 {
-    width: 0.6rem !important;
-    height: 9vw !important;
-    right: 6rem !important;
-    left: auto !important;
-}
 .cable {
     width: 0.6rem !important;
     height: 9vw !important;
     right: 49.3vw  !important;
     left: auto !important;
-
-}
-.cable-1 {
-    top: -2vw !important;
-}
-.cable-2 {
-    top: -3vw !important;
-}
-.cable-3 {
-    top: calc(2rem + 3vw) !important;
-}
-.cable-4 {
-    top: calc(4.1rem + 9vw) !important;
 }
 
 .utility-container{
@@ -228,7 +226,26 @@ img{
     user-select: none;
 }
 
+.pb-video{
+    padding-bottom: 5rem !important;
+}
+
+
 @media (min-width: 992px) { 
+    .btn-group button:nth-of-type(1) {
+        top: -3vw ;
+    }
+    .btn-group button:nth-of-type(2) {
+        top: 4vw ;
+    }
+    .btn-group button:nth-of-type(3) {
+        top: 10vw ;
+    }
+
+    .container-video button{
+        top: 5vw;
+    }    
+
     .utility-container{
         padding-bottom: 0rem;
     }
@@ -238,6 +255,7 @@ img{
 
     .btn-group{
         align-items: center;
+        padding-bottom: 7rem;
     }
 
     .btn-px{
@@ -252,5 +270,8 @@ img{
         width: 45vw !important;
         height: 30vw !important;
     }
+    .f1-custom{
+        font-size: 1.8vw !important;
  }
+}
 

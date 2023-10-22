@@ -27,7 +27,7 @@ const WorkinProgress = () => {
     return ( 
         <div className="position-relative vh-100 vw-100 work-in-progress d-flex justify-content-center align-items-center flex-column gap-4">
             <img className="img-fluid wip-image" src={workInProgress} alt="work in progress" />
-            <div className="text-container">
+            <div className="text-wip-container">
                 <h1>Work In Progress{point}</h1>
                 <div className="d-flex justify-content-center">
                     <Link to="/">Torna Alla Home</Link>

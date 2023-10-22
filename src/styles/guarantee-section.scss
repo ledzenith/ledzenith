@@ -3,17 +3,17 @@
 }
 
 .box{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   flex-wrap: wrap;
-   flex-direction: column;
-   
-   border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    border-radius: 50px;
     background: #4e5255;
     box-shadow: inset -20px -20px 60px #424648,
                 inset 20px 20px 60px #5a5e62;
+    padding: 7rem ;
 }
 .invisible-box,.box{
    max-width: 14rem;

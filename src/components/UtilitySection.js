@@ -182,9 +182,9 @@ const UtilitySection = () => {
     }
      
     return (          
-                <div className="container-fluid bg-utility-custom bg-gradient position-relative">
+                <div className="container-fluid bg-utility-custom position-relative">
                         <div className="row d-block d-lg-flex align-items-center white utility-container">
-                            <div id="utility-section" ref={utilitySectionRef} className={((window.innerWidth > 992) ? "vh-100 " : "") + "video-container order-2 col-6 d-flex flex-column justify-content-center align-items-center w-50 pt-video "}>
+                            <div id="utility-section" ref={utilitySectionRef} className={((window.innerWidth > 992) ? "vh-100 pb-video " : "pt-video ") + "video-container order-2 col-6 d-flex flex-column justify-content-center align-items-center w-50"}>
                                     <div className={ (btnSvegliaClick ? "border-sveglia" : btnLuciClick ? "border-luci" : btnMusicaClick ? "border-musica" : btnWirelessClick ? "border-wireless" : btnAppClick ? "border-app" : btnRisveglioClick ? "border-risveglio" : btnVideoClick ? "border-video" :  "") + 
                                                      " size-video-container border-2 rounded-1 ratio ratio-4x3 position-relative border-solid"}>
 
@@ -199,39 +199,39 @@ const UtilitySection = () => {
                                             <img className="position-absolute cable-video z-1 d-none d-lg-block" src={btnVideoClick ? videoWireActive : videoWire} alt="center low cable"></img>
 
                                             
-
-                                            <p className={btnSvegliaClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoSveglia}</p>
-                                            <p className={btnLuciClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoLuci}</p>
-                                            <p className={btnMusicaClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoMusica}</p>
-                                            <p className={btnWirelessClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoWireless}</p>
-                                            <p className={btnAppClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoApp}</p>
-                                            <p className={btnRisveglioClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoRisveglio}</p>
+                                            <div className="text-container px-3">
+                                                <p className={btnSvegliaClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoSveglia}</p>
+                                                <p className={btnLuciClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoLuci}</p>
+                                                <p className={btnMusicaClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoMusica}</p>
+                                                <p className={btnWirelessClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoWireless}</p>
+                                                <p className={btnAppClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoApp}</p>
+                                                <p className={btnRisveglioClick ? "d-block f1-custom fw-normal lh-base" : "d-none"}>{testoRisveglio}</p>
+                                            </div>
                                             {/* <iframe title="video product" className="p-3" src={video} allowFullScreen/> */}
                                             <video className={btnVideoClick ? "d-block position-relative object-fit-cover" : "d-none" } src={video} allowFullScreen autoPlay controls muted loop></video>
                                     </div>
 
-                                <div className="mt-3 z-2 position-relative">
+                                <div className="container-video z-2 d-flex justify-content-center flex-column align-items-center">
                                     
-                                <img className="position-absolute cable0 cable-1 z-n1 d-block d-lg-none" 
-                                     src={btnVideoClick ? videoWireSimple : btnSvegliaClick ? svegliaWire : btnLuciClick ? luciWire : btnMusicaClick ? musicaWire : btnWirelessClick ? wirelessWire : btnAppClick ? appWire : btnRisveglioClick ? risveglioWire : wire} alt="cable">
-                                </img>   
-                                <BottoneUtility key={"video"}
-                                                id={"video"}
-                                                name={(btnVideoHover || btnVideoClick || window.innerWidth < 992) ? "Mostra Video" : <i className="bi bi-play-circle-fill fs-6"></i>} 
-                                                hoverState={btnVideoHover}
-                                                clickState={btnVideoClick}
-                                                handleBtnHover={handleBtnHover}
-                                                handleBtnLeave={handleBtnLeave}
-                                                handleBtnClick={handleBtnClick}
-                                                handleBgColor={handleBgColor}
-                                                bgColor={"bg-color-video"}
-                                                shadowColor={"shadow-btn-video"}/>
+                                    <img className="cable z-n1 d-block d-lg-none" 
+                                        src={btnVideoClick ? videoWireSimple : btnSvegliaClick ? svegliaWire : btnLuciClick ? luciWire : btnMusicaClick ? musicaWire : btnWirelessClick ? wirelessWire : btnAppClick ? appWire : btnRisveglioClick ? risveglioWire : wire} alt="cable"></img>   
+                                    <BottoneUtility key={"video"}
+                                                    id={"video"}
+                                                    name={(btnVideoHover || btnVideoClick || window.innerWidth < 992) ? "Mostra Video" : <i className="bi bi-play-circle-fill fs-6"></i>} 
+                                                    hoverState={btnVideoHover}
+                                                    clickState={btnVideoClick}
+                                                    handleBtnHover={handleBtnHover}
+                                                    handleBtnLeave={handleBtnLeave}
+                                                    handleBtnClick={handleBtnClick}
+                                                    handleBgColor={handleBgColor}
+                                                    bgColor={"bg-color-video"}
+                                                    shadowColor={"shadow-btn-video"}/>
                                 </div>
                             </div>
 
                             <div className="btn-group col d-flex flex-column order-1 btn-gap-y btn-px align-items-center">
 
-                                <img className="position-absolute cable cable-2 z-1 d-block d-lg-none" 
+                                <img className="cable z-1 d-block d-lg-none" 
                                      src={btnSvegliaClick ? svegliaWire : btnLuciClick ? luciWire : btnMusicaClick ? musicaWire : btnWirelessClick ? wirelessWire : btnAppClick ? appWire : btnRisveglioClick ? risveglioWire : wire} alt="cable"></img>
                                 <BottoneUtility key={"sveglia"}
                                                 id={"sveglia"} 
@@ -245,7 +245,7 @@ const UtilitySection = () => {
                                                 bgColor={"bg-color-sveglia"}
                                                 shadowColor={"shadow-btn-sveglia"}/>
                                                 
-                                <img className="position-absolute cable cable-3 z-1 d-block d-lg-none" 
+                                <img className="cable z-1 d-block d-lg-none" 
                                      src={btnLuciClick ? luciWire : btnMusicaClick ? musicaWire : btnWirelessClick ? wirelessWire : btnAppClick ? appWire : btnRisveglioClick ? risveglioWire : wire} alt="cable"></img>
                                 <BottoneUtility key={"luci"} 
                                                 id={"luci"}
@@ -259,7 +259,7 @@ const UtilitySection = () => {
                                                 bgColor={"bg-color-luci"}
                                                 shadowColor={"shadow-btn-luci"}/>
 
-                                <img className="position-absolute cable cable-4 z-1 d-block d-lg-none" 
+                                <img className="cable z-1 d-block d-lg-none" 
                                      src={btnMusicaClick ? musicaWire : btnWirelessClick ? wirelessWire : btnAppClick ? appWire : btnRisveglioClick ? risveglioWire : wire} alt="cable"></img>
                                 <BottoneUtility key={"musica"} 
                                                 id={"musica"}
@@ -277,7 +277,7 @@ const UtilitySection = () => {
 
                             <div className=" btn-group col d-flex flex-column order-3 btn-gap-y btn-px align-items-center">
 
-                                <img className="position-absolute cable cable-2 z-1 d-block d-lg-none" 
+                                <img className="cable z-1 d-block d-lg-none" 
                                      src={btnWirelessClick ? wirelessWire : btnAppClick ? appWire : btnRisveglioClick ? risveglioWire : wire} alt="cable"></img>
                                 <BottoneUtility key={"wireless"}
                                                 id={"wireless"} 
@@ -291,7 +291,7 @@ const UtilitySection = () => {
                                                 bgColor={"bg-color-wireless"}
                                                 shadowColor={"shadow-btn-wireless"}/>
 
-                                <img className="position-absolute cable cable-3 z-1 d-block d-lg-none" 
+                                <img className="cable z-1 d-block d-lg-none" 
                                      src={btnAppClick ? appWire : btnRisveglioClick ? risveglioWire : wire} alt="cable"></img>                 
                                 <BottoneUtility key={"app"} 
                                                 id={"app"} 
@@ -305,7 +305,7 @@ const UtilitySection = () => {
                                                 bgColor={"bg-color-app"}
                                                 shadowColor={"shadow-btn-app"}/>
 
-                                <img className="position-absolute cable cable-4 z-1 d-block d-lg-none" 
+                                <img className="cable z-1 d-block d-lg-none" 
                                      src={btnRisveglioClick ? risveglioWire : wire} alt="cable"></img>                
                                 <BottoneUtility key={"risveglio"}
                                                 id={"risveglio"}    
