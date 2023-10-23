@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import workInProgress from "../assets/img/work-in-progress.png"
+import workInProgress from "../assets/img/work-in-progress.jpg"
 import "../styles/work-in-progress.scss"
 import { Link } from "react-router-dom";
 
