@@ -14,7 +14,7 @@ const Footer = () => {
                     <i className="mx-5 text-white bi bi-lightbulb cursor-pointer fs-1"></i>
                 </a>
             
-                <ul className={"nav col-md-4 flex-wrap px-3 my-0 mx-auto" + ((window.innerWidth >= 768) ? " align-items-end flex-column" : " justify-content-center")}>
+                <ul className={"nav col-md-4 flex-wrap px-3 my-0 mx-auto text-end " + ((window.innerWidth >= 768) ? " align-items-end flex-column" : " justify-content-center")}>
                     <li className="nav-item"><Link to="/soon" className="nav-link px-4 text-white">Informativa sulla Privacy</Link></li>
                     <li className="nav-item"><Link to="/soon" className="nav-link px-4 text-white">Informativa sui Cookie</Link></li>
                     <li className="nav-item"><Link to="/soon" className="nav-link px-4 text-white">Condizioni di Vendita</Link></li>

@@ -182,9 +182,13 @@ const UtilitySection = () => {
     }
      
     return (          
-                <div className="container-fluid bg-utility-custom position-relative">
-                        <div className="row d-block d-lg-flex align-items-center white utility-container">
-                            <div id="utility-section" ref={utilitySectionRef} className={((window.innerWidth > 992) ? "vh-100 pb-video " : "pt-video ") + "video-container order-2 col-6 d-flex flex-column justify-content-center align-items-center w-50"}>
+                <div ref={utilitySectionRef} id="utility-section" className="container-fluid bg-utility-custom position-relative">
+                        <div className="utility-text">
+                            <h1>L'innovazione sotto forma di Led è arrivata!</h1>
+                            <h5 className="px-5 fst-italic ">Scopri Ledzenith e tutte le sue funzionalità</h5>
+                        </div>
+                        <div className="utility-container row d-block d-lg-flex align-items-center white">
+                            <div   className={((window.innerWidth > 992) ? "vh-100 pb-video " : "pt-video ") + "video-container order-2 col-6 d-flex flex-column justify-content-center align-items-center w-50"}>
                                     <div className={ (btnSvegliaClick ? "border-sveglia" : btnLuciClick ? "border-luci" : btnMusicaClick ? "border-musica" : btnWirelessClick ? "border-wireless" : btnAppClick ? "border-app" : btnRisveglioClick ? "border-risveglio" : btnVideoClick ? "border-video" :  "") + 
                                                      " size-video-container border-2 rounded-1 ratio ratio-4x3 position-relative border-solid"}>
 
@@ -217,7 +221,7 @@ const UtilitySection = () => {
                                         src={btnVideoClick ? videoWireSimple : btnSvegliaClick ? svegliaWire : btnLuciClick ? luciWire : btnMusicaClick ? musicaWire : btnWirelessClick ? wirelessWire : btnAppClick ? appWire : btnRisveglioClick ? risveglioWire : wire} alt="cable"></img>   
                                     <BottoneUtility key={"video"}
                                                     id={"video"}
-                                                    name={(btnVideoHover || btnVideoClick || window.innerWidth < 992) ? "Mostra Video" : <i className="bi bi-play-circle-fill fs-6"></i>} 
+                                                    name={(window.innerWidth < 992) ? <span><i className="bi bi-play-circle-fill fs-6 me-2"></i>Mostra Video</span> : (btnVideoHover || btnVideoClick) ? "Mostra Video" : <i className="bi bi-play-circle-fill fs-6"></i>} 
                                                     hoverState={btnVideoHover}
                                                     clickState={btnVideoClick}
                                                     handleBtnHover={handleBtnHover}
@@ -235,7 +239,7 @@ const UtilitySection = () => {
                                      src={btnSvegliaClick ? svegliaWire : btnLuciClick ? luciWire : btnMusicaClick ? musicaWire : btnWirelessClick ? wirelessWire : btnAppClick ? appWire : btnRisveglioClick ? risveglioWire : wire} alt="cable"></img>
                                 <BottoneUtility key={"sveglia"}
                                                 id={"sveglia"} 
-                                                name={(btnSvegliaHover || btnSvegliaClick || window.innerWidth < 992) ? "Sveglia" : <i className="bi bi-alarm fs-6"></i>} 
+                                                name={(window.innerWidth < 992) ? <span><i className="bi bi-alarm fs-6 me-2"></i>Sveglia</span> : (btnSvegliaHover || btnSvegliaClick) ? "Sveglia" : <i className="bi bi-alarm fs-6"></i>} 
                                                 hoverState={btnSvegliaHover}
                                                 clickState={btnSvegliaClick}
                                                 handleBtnHover={handleBtnHover}
@@ -249,7 +253,7 @@ const UtilitySection = () => {
                                      src={btnLuciClick ? luciWire : btnMusicaClick ? musicaWire : btnWirelessClick ? wirelessWire : btnAppClick ? appWire : btnRisveglioClick ? risveglioWire : wire} alt="cable"></img>
                                 <BottoneUtility key={"luci"} 
                                                 id={"luci"}
-                                                name={(btnLuciHover || btnLuciClick || window.innerWidth < 992) ? "Luci Led" : <i className="bi bi-lightbulb fs-6"></i>}
+                                                name={(window.innerWidth < 992) ? <span><i className="bi bi-lightbulb fs-6 me-2"></i>Led</span> : (btnLuciHover || btnLuciClick) ? "Led" : <i className="bi bi-lightbulb fs-6"></i>}
                                                 hoverState={btnLuciHover} 
                                                 clickState={btnLuciClick}
                                                 handleBtnHover={handleBtnHover} 
@@ -263,7 +267,7 @@ const UtilitySection = () => {
                                      src={btnMusicaClick ? musicaWire : btnWirelessClick ? wirelessWire : btnAppClick ? appWire : btnRisveglioClick ? risveglioWire : wire} alt="cable"></img>
                                 <BottoneUtility key={"musica"} 
                                                 id={"musica"}
-                                                name={(btnMusicaHover || btnMusicaClick || window.innerWidth < 992) ? "Musica" : <i className="bi bi-music-note-beamed fs-6"></i>}
+                                                name={(window.innerWidth < 992) ? <span><i className="bi bi-music-note-beamed fs-6 me-2"></i>Musica</span> : (btnMusicaHover || btnMusicaClick) ? "Musica" : <i className="bi bi-music-note-beamed fs-6"></i>}
                                                 hoverState={btnMusicaHover} 
                                                 clickState={btnMusicaClick}
                                                 handleBtnHover={handleBtnHover} 
@@ -281,7 +285,7 @@ const UtilitySection = () => {
                                      src={btnWirelessClick ? wirelessWire : btnAppClick ? appWire : btnRisveglioClick ? risveglioWire : wire} alt="cable"></img>
                                 <BottoneUtility key={"wireless"}
                                                 id={"wireless"} 
-                                                name={(btnWirelessHover || btnWirelessClick || window.innerWidth < 992) ? "Ricarica Wireless" : <i className="bi bi-wifi fs-6"></i>}
+                                                name={(window.innerWidth < 992) ? <span><i className="bi bi-wifi fs-6 me-2"></i>Wireless</span> : (btnWirelessHover || btnWirelessClick) ? "Wireless" : <i className="bi bi-wifi fs-6"></i>}
                                                 hoverState={btnWirelessHover}
                                                 clickState={btnWirelessClick} 
                                                 handleBtnHover={handleBtnHover} 
@@ -295,7 +299,7 @@ const UtilitySection = () => {
                                      src={btnAppClick ? appWire : btnRisveglioClick ? risveglioWire : wire} alt="cable"></img>                 
                                 <BottoneUtility key={"app"} 
                                                 id={"app"} 
-                                                name={(btnAppHover || btnAppClick || window.innerWidth < 992) ? "App" : <i className="bi bi-google-play fs-6"></i>}
+                                                name={(window.innerWidth < 992) ? <span><i className="bi bi-google-play fs-6 me-2"></i>App</span> : (btnAppHover || btnAppClick) ? "App" : <i className="bi bi-google-play fs-6"></i>}
                                                 hoverState={btnAppHover}
                                                 clickState={btnAppClick} 
                                                 handleBtnHover={handleBtnHover} 
@@ -308,8 +312,8 @@ const UtilitySection = () => {
                                 <img className="cable z-1 d-block d-lg-none" 
                                      src={btnRisveglioClick ? risveglioWire : wire} alt="cable"></img>                
                                 <BottoneUtility key={"risveglio"}
-                                                id={"risveglio"}    
-                                                name={(btnRisveglioHover || btnRisveglioClick || window.innerWidth < 992) ? "Simulazione Risveglio" : <i className="bi bi-heart-fill fs-6"></i>}
+                                                id={"risveglio"}   
+                                                name={(window.innerWidth < 992) ? <span><i className="bi bi-heart-fill fs-6 me-2"></i>Risveglio</span> :  (btnRisveglioHover || btnRisveglioClick) ? "Risveglio" : <i className="bi bi-heart-fill fs-6"></i>}
                                                 hoverState={btnRisveglioHover} 
                                                 clickState={btnRisveglioClick}
                                                 handleBtnHover={handleBtnHover} 

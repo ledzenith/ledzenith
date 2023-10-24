@@ -148,7 +148,7 @@ import { testoReso, testoSpedizione, testoClienti, testoTempi, testoPagamento } 
             <div id="guarantee-section" className="wrapper bg-light position-relative">
                 <i ref={arrowLeft} onClick={()=> handleClick(0)} className="arrow bi bi-chevron-left d-none d-lg-flex"></i>
                 <div className="main-container">
-                    <h1 className="guarantee-title text-center mb-5 px-5 text-uppercase title-custom position-relative">Scopri i nostri servizi</h1>
+                    <h1 className="guarantee-title text-center mb-5 px-5 position-relative">Servizi</h1>
                     <div ref={carouselRef} className={`carousel bg-light ${expand ? "expand" : " gradient-guarantee" } ${(window.innerWidth < 992) ? " carousel-responsive" : "" } `} onTouchStart={handlePress} onTouchMove={handleMove} onTouchEnd={handleOut} 
                                                                                                                         onMouseDown={handlePress}  onMouseMove={handleMove} onMouseUp={handleOut}  onMouseLeave={handleOut}>                                                                                       
                                 <div className="icon-container" onMouseOut={handlePropagation}>
@@ -190,7 +190,7 @@ import { testoReso, testoSpedizione, testoClienti, testoTempi, testoPagamento } 
                                     <div className="invisible-box d-lg-none"><i></i></div>
                                 </div>
                     </div>
-                    <span className="expander d-flex justify-content-center align-items-center fw-bolder fs-6 d-lg-none"> <u onClick={() => handleExpansion()}> {expand ? "riduci": "espandi"} </u> </span>
+                    <span className="expander d-flex justify-content-center align-items-center fw-bolder fs-4 d-lg-none p-5"> <u onClick={() => handleExpansion()}> {expand ? "riduci": "espandi"} </u> </span>
                 </div>
                 <i ref={arrowRight} onClick={() => handleClick(1)} className="arrow bi bi-chevron-right d-none d-lg-flex"></i>
             </div>

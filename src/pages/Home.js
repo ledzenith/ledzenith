@@ -4,6 +4,7 @@ import UpperMenu from "../components/UpperMenu";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import AboutUs from "../components/AboutUs";
+import CustomerService from "../components/CustomerService";
 
 const Home = () => {
     // Questa sarà La pagina Home che conterrà i seguenti componenti:
@@ -52,8 +53,9 @@ const Home = () => {
         <>
             <UpperMenu isScrolling={isScrolling} isMouseTop={isMouseTop}/>
             <UtilitySection/>
-            <AboutUs></AboutUs>
+            <AboutUs />
             <GuaranteeSection/>
+            <CustomerService />
             <Footer />
         </>
      );
