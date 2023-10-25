@@ -1,8 +1,9 @@
 .contact-us, .reference{
-    width: 40%;
-    height: calc(60% + 17vw);
-    min-width: 25rem;
+    width: 50%;
     max-width: 40rem;
+    min-height: 40rem;
+    // min-height: 45rem;
+    // max-height: 57rem;
 
     background: rgb(43,48,51);
     background: -moz-linear-gradient(0deg, rgba(43,48,51,1) 0%, rgba(61,61,61,1) 100%);
@@ -14,16 +15,14 @@
 }
 .contact-us{
     position: relative;
-    left: 4%;
-    bottom: 10%;
+    left: 3rem;
 }
 .reference{
     position: relative;
-    top: 4%;
-    right: 10%;
+    top: 4vw;
+    right: 3rem;
 }
 .overlay{
-
     filter:blur(2px);
     -o-filter:blur(2px);
     -ms-filter:blur(2px);
@@ -37,16 +36,18 @@
 .reference ul li {
     margin-top: 4rem;
     margin-bottom: 4rem;
-    font-size: clamp(1rem, 1.5vw, 1.5rem)
+    font-size: clamp(.7rem, 2.5vw, 1.2rem)
 }
 .reference ul li i {
     margin-right: 1rem;
 }
 .reference ul {
-    padding-left: 0;
+    padding-left: 4vw;
+    padding-right: 1rem;
 }
 .button-about{
-    min-width: 7rem;
+    min-width: 10rem;
+    margin-top: .5rem;
 }
 .first-option{
     font-style: italic;
@@ -60,4 +61,40 @@
     box-shadow: none !important; 
     outline: none !important;
     border: none !important;
+}
+.btn-container{
+    padding-bottom: 5rem;
+    padding-top: 1rem;
+}
+.customer-section h5{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (max-width: 992px){
+    .contact-us, .reference{
+        width: 95%;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+    .contact-us{
+        position: absolute;
+        left: auto;
+        bottom: 0;
+    }
+    .reference{
+        position: absolute;
+        top: 0;
+        right: auto;
+    }
+
+    .contact-on-view{
+        position: relative !important;
+        top: 5rem !important;
+        right: 0 !important;
+        left: 0 !important;
+    }
+    .overlay {
+        top: -4rem;
+    }
 }

@@ -1,20 +1,116 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/customer-service.scss"
 
 const CustomerService = () => {
     const [clicked, setClicked] = useState(0)
 
+    const [swiped, setSwiped] = useState(false)
+    const [isContactView, setIsContactsView] = useState(true)
+    const [touched, setTouched] = useState(false)
+    const [prevY, setPrevY] = useState()
+    const [allowScroll, setAllowScroll] = useState(true)
+    
+    useEffect(() => {
+        if(!allowScroll){
+            document.body.classList.add("overflow-hidden")
+        } else{
+            document.body.classList.remove("overflow-hidden")
+        }
+        
+      }, [allowScroll]);
+
+
+
     function handleClick(i){
+        if (i !== clicked) {
+            setIsContactsView(!isContactView);
+            }
         setClicked(i)
     }
 
-    return ( 
-        <div>
-            <h1 className="pt-5">Contattaci per saperne di più</h1>
-            <div id="contact" className="contact-section vh-100 d-flex justify-content-center align-items-center position-relative">
+    function handleSwipe(e){
+        if(touched){
+            if(e.touches[0].clientY > prevY){
 
-                <div onClick={() => handleClick(0)} className={"contact-us bg-secondary " + ((clicked === 0) ? "z-1 " : "z-0 overlay" )}>
-                    <div className={"w-100 h-100 z-2 bg-dark position-absolute opacity-75 " + ((clicked === 0) ? " visually-hidden" : "z-2 pointer" )}></div>
+                const differenceOfMove = Math.abs(e.touches[0].clientY - prevY)
+                if(differenceOfMove > 50 && differenceOfMove < 200){
+                    setAllowScroll(false)
+                    setSwiped(true)
+                } else if (differenceOfMove >= 200) {
+                    setAllowScroll(true)
+                    setSwiped(false)
+                }
+
+            } else {
+                setAllowScroll(true)
+            }
+        } 
+    }
+
+    function handleWhoVisible(i){
+        if(window.innerWidth > 992){
+            if(clicked === i){
+                return "z-1"
+            } else {
+                return "z-0 overlay"
+            }
+            
+        } else {
+                if(isContactView){
+                    if(i===0){
+                        return "contact-on-view z-1"
+                    } else{
+                        return "z-0 overlay"
+                    }
+                    }else{
+                        if(i===0){
+                            return "z-0 overlay"
+                        } else{ 
+                            return "contact-on-view z-1"
+                        }
+            // if(isContactView && i === 0){
+            //     return "contact-on-view z-1"
+            // }
+            // if(isContactView && i === 1){
+            //     return "z-0 overlay"
+            // }
+            // if(!isContactView && i === 0){
+            //     return "contact-on-view z-1"
+            // }
+            // if(!isContactView && i === 1){
+            //     return "z-0 overlay"
+            // }
+
+            }
+        }
+    }
+    
+
+    function handleTouched(e){
+        setPrevY(e.touches[0].clientY)
+        setTouched(true);
+    }
+    function handleTouchLeave(i){
+        if(swiped){
+            setIsContactsView(!isContactView);
+            if(clicked === 0){
+                setClicked(1)
+            } else {
+                setClicked(0)
+            }
+        }
+        setSwiped(false)
+        setTouched(false)
+    }
+
+    return ( 
+        <div className="customer-section">
+            <h1 className="pt-5">Contattaci per saperne di più</h1>
+            <h5 className={(window.innerWidth > 992 ? "visually-hidden ": "" )+ "mt-4"}>Scorri verso l'alto per cambiare contenuto o <br/> clicca la parte più scura</h5>
+            <div id="contact" className={"contact-section d-flex justify-content-center align-items-center position-relative" + ((window.innerWidth <= 992) ? " flex-column" : "" )}>
+
+                <div onClick={() => handleClick(0)} onTouchStart={handleTouched} onTouchEnd={()=>handleTouchLeave(0)} onTouchMove={handleSwipe} className={"contact-us " + handleWhoVisible(0)}>
+                    <div className={"w-100 h-100 z-2 bg-dark position-absolute opacity-75 " + (((clicked === 0 && window.innerWidth > 992) || isContactView) ? "visually-hidden" : "z-2 pointer" )}></div>
                     <h2>Chiedi informazioni tramite il <br/> modulo seguente</h2>
 
                     <form className="row g-3 px-4 mt-3 ">
@@ -54,14 +150,15 @@ const CustomerService = () => {
                             </div>
                         </div>
                         
-                        <div className="col-12 d-flex justify-content-end">
-                            <button type="submit" id="bg-color-video" className="button-about btn btn-primary rounded-2 fw-bold text-white px-2 py-1">Send</button>
+                        <div className={"btn-container col-12 d-flex " + ((window.innerWidth <= 992) ? "justify-content-center" : "justify-content-end" )}>
+                            <button type="submit" id="bg-color-video" className="button-about btn btn-primary rounded-2 fw-bold text-white px-2 py-1 ">Send</button>
                         </div>
                     </form>
                 </div>
 
-                <div onClick={() => handleClick(1)} className={"reference bg-primary d-flex justify-content-center align-items-center flex-column " + ((clicked === 1) ? "z-1 " : "z-0 overlay" )}>
-                    <div className={"w-100 h-100 bg-dark position-absolute opacity-75 " + ((clicked === 1) ? "visually-hidden" : "z-0 pointer" )}>
+
+                <div onClick={() => handleClick(1)} onTouchStart={handleTouched} onTouchEnd={()=>handleTouchLeave(1)} onTouchMove={handleSwipe} className={"reference d-flex justify-content-center flex-column " + handleWhoVisible(1) }>
+                    <div className={"w-100 h-100 bg-dark position-absolute opacity-75 " + (((clicked === 1 && window.innerWidth > 992) || !isContactView) ? "visually-hidden" : "z-0 pointer" )}>
                     </div>
                     <h2>Utilizza le nostre referenze</h2>
                     <ul>

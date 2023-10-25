@@ -34,6 +34,9 @@ const UpperMenu = ({isScrolling, isMouseTop}) => {
                             <a className="nav-link" href="#guarantee-section">Servizi</a>
                         </li>
                         <li className="nav-item">
+                            <a className="nav-link" href="#contact">Assistenza</a>
+                        </li>
+                        <li className="nav-item">
                             <div className="nav-link p-0 cursor-pointer"><i className="bi bi-cart fs-4 p-1"></i></div>
                             {/* aggiungere modale entrante da destra per il carrello */}
                         </li>

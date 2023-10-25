@@ -6,7 +6,7 @@ $spacer : 2vw;
 
 h1 {
     font-family: "Roboto Slab", sans-serif !important;
-    font-size: 3rem !important;
+    font-size: clamp(2rem, 3vw, 3rem) !important;
     font-weight: 600 !important;
     text-align: center;
     letter-spacing: 0.2rem;
@@ -15,7 +15,7 @@ h1 {
 h5 {
     font-family: 'Lato', sans-serif;
     text-align: center;
-    font-size: 1.5rem !important;
+    font-size: clamp(1.2rem, 2vw, 2rem) !important;
 }
 
 p {
@@ -34,6 +34,8 @@ h2 {
     text-align: center;
     font-size: clamp(1.5rem, 2vw, 3rem) !important;
     padding-top: 3rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
 }
 
 ul li{
