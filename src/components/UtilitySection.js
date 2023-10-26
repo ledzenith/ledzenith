@@ -182,13 +182,13 @@ const UtilitySection = () => {
     }
      
     return (          
-                <div ref={utilitySectionRef} id="utility-section" className="container-fluid bg-utility-custom position-relative">
+                <div className="container-fluid bg-utility-custom position-relative">
                         <div className="utility-text">
                             <h1>L'innovazione sotto forma di Led è arrivata!</h1>
                             <h5 className="px-5 fst-italic ">Scopri Ledzenith e tutte le sue funzionalità</h5>
                         </div>
-                        <div className="utility-container row d-block d-lg-flex align-items-center white">
-                            <div   className={((window.innerWidth > 992) ? "vh-100 pb-video " : "pt-video ") + "video-container order-2 col-6 d-flex flex-column justify-content-center align-items-center w-50"}>
+                        <div ref={utilitySectionRef} id="utility-section" className="utility-container row d-block d-lg-flex align-items-center white">
+                            <div className={((window.innerWidth > 992) ? "vh-100 pb-video " : "pt-video ") + "video-container order-2 col-6 d-flex flex-column justify-content-center align-items-center w-50"}>
                                     <div className={ (btnSvegliaClick ? "border-sveglia" : btnLuciClick ? "border-luci" : btnMusicaClick ? "border-musica" : btnWirelessClick ? "border-wireless" : btnAppClick ? "border-app" : btnRisveglioClick ? "border-risveglio" : btnVideoClick ? "border-video" :  "") + 
                                                      " size-video-container border-2 rounded-1 ratio ratio-4x3 position-relative border-solid"}>
 

@@ -216,7 +216,7 @@
 
 .utility-container{
     padding-bottom: 5rem;
-    margin-top: 1.5rem !important;
+    padding-top: 5rem !important;
 }
 img{
     -moz-user-select: none;
@@ -249,8 +249,8 @@ img{
 
     .utility-container{
         padding-bottom: 0rem;
-        position: relative;
         bottom: 8rem;
+        padding-top: 0rem !important;
     }
     .btn-gap-y{
         row-gap: 8vw;
@@ -273,9 +273,5 @@ img{
     .f1-custom{
         font-size: 1.6vw !important;
     }
-    .bg-utility-custom{
-        height: 100vh;
-    }
-
 }
 
