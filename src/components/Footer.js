@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../styles/upper-menu.scss"
+import "./upperMenu/upper-menu.scss"
 
 const Footer = () => {
     // Footer, prendere ispirazione da Amazon
