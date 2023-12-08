@@ -182,12 +182,12 @@ const UtilitySection = () => {
     }
      
     return (          
-                <div ref={utilitySectionRef} id="utility-section" className="container-fluid bg-utility-custom position-relative">
+                <div ref={utilitySectionRef} className="container-fluid bg-utility-custom position-relative">
                         <div className="utility-text">
                             <h1 className="text-white">L'innovazione sotto forma di Led è arrivata!</h1>
                             <h5 className="px-5 fst-italic text-light">Scopri Ledzenith e tutte le sue funzionalità</h5>
                         </div>
-                        <div className="utility-container row d-block d-lg-flex align-items-center white">
+                        <div  id="utility-section" className="utility-container row d-block d-lg-flex align-items-center white">
                             <div className={((window.innerWidth > 992) ? "vh-100 pb-video " : "pt-video ") + "video-container order-2 col-6 d-flex flex-column justify-content-center align-items-center w-50"}>
                                     <div className={ (btnSvegliaClick ? "border-sveglia shadow-btn-sveglia" : btnLuciClick ? "border-luci shadow-btn-luci" : btnMusicaClick ? "border-musica shadow-btn-musica" : btnWirelessClick ? "border-wireless shadow-btn-wireless" : btnAppClick ? "border-app shadow-btn-app" : btnRisveglioClick ? "border-risveglio shadow-btn-risveglio" : btnVideoClick ? "border-video shadow-btn-video" :  "") + 
                                                      " size-video-container rounded-1 ratio ratio-4x3 position-relative"}>

@@ -1,51 +1,28 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./customer-service.scss"
 
+
 const CustomerService = () => {
-    const [clicked, setClicked] = useState(0)
+    const [clicked, setClicked] = useState(0);
+    const [checkboxChecked, setCheckboxChecked] = useState(false);
+    const contactUs = useRef();
+    const reference = useRef();
+      
+    // const [swiped, setSwiped] = useState(false)
+    // const [isContactView, setIsContactsView] = useState(true)
+    // const [touched, setTouched] = useState(false)
+    // const [prevY, setPrevY] = useState()
+    // const [allowScroll, setAllowScroll] = useState(true)
 
-    const [swiped, setSwiped] = useState(false)
-    const [isContactView, setIsContactsView] = useState(true)
-    const [touched, setTouched] = useState(false)
-    const [prevY, setPrevY] = useState()
-    const [allowScroll, setAllowScroll] = useState(true)
-    
-    useEffect(() => {
-        if(!allowScroll){
-            document.body.classList.add("overflow-hidden")
-        } else{
-            document.body.classList.remove("overflow-hidden")
-        }
+    // useEffect(() => {
+    //     if(!allowScroll){
+    //         document.body.classList.add("overflow-hidden")
+    //     } else{
+    //         document.body.classList.remove("overflow-hidden")
+    //     }
         
-      }, [allowScroll]);
+    //   }, [allowScroll]);
 
-
-
-    function handleClick(i){
-        if (i !== clicked) {
-            setIsContactsView(!isContactView);
-            }
-        setClicked(i)
-    }
-
-    function handleSwipe(e){
-        if(touched){
-            if(e.touches[0].clientY > prevY){
-
-                const differenceOfMove = Math.abs(e.touches[0].clientY - prevY)
-                if(differenceOfMove > 50 && differenceOfMove < 200){
-                    setAllowScroll(false)
-                    setSwiped(true)
-                } else if (differenceOfMove >= 200) {
-                    setAllowScroll(true)
-                    setSwiped(false)
-                }
-
-            } else {
-                setAllowScroll(true)
-            }
-        } 
-    }
 
     function handleWhoVisible(i){
         if(window.innerWidth > 992){
@@ -54,63 +31,112 @@ const CustomerService = () => {
             } else {
                 return "z-0 overlay"
             }
-            
         } else {
-                if(isContactView){
-                    if(i===0){
-                        return "contact-on-view z-1"
-                    } else{
-                        return "z-0 overlay"
-                    }
-                    }else{
-                        if(i===0){
-                            return "z-0 overlay"
-                        } else{ 
-                            return "contact-on-view z-1"
-                        }
-            // if(isContactView && i === 0){
-            //     return "contact-on-view z-1"
-            // }
-            // if(isContactView && i === 1){
-            //     return "z-0 overlay"
-            // }
-            // if(!isContactView && i === 0){
-            //     return "contact-on-view z-1"
-            // }
-            // if(!isContactView && i === 1){
-            //     return "z-0 overlay"
-            // }
 
-            }
         }
     }
     
-
-    function handleTouched(e){
-        setPrevY(e.touches[0].clientY)
-        setTouched(true);
-    }
-    function handleTouchLeave(i){
-        if(swiped){
-            setIsContactsView(!isContactView);
+    function handleClick(){
+        if(window.innerWidth <= 992){
             if(clicked === 0){
-                setClicked(1)
-            } else {
-                setClicked(0)
+                reference.current.classList.remove("d-none");
+                contactUs.current.classList.add("d-none");
+            } else{
+                contactUs.current.classList.remove("d-none");
+                reference.current.classList.add("d-none");
             }
-        }
-        setSwiped(false)
-        setTouched(false)
+        }    
+        if(clicked === 0){
+            setCheckboxChecked(true);
+            setClicked(1)
+            reference.current.scrollIntoView({ behavior: "smooth" });
+        } else{
+            setCheckboxChecked(false);
+            setClicked(0)
+            contactUs.current.scrollIntoView({ behavior: "smooth" });
+        }             
     }
+
+    // function handleClick(i){
+    //     if (i !== clicked) {
+    //         setIsContactsView(!isContactView);
+    //         }
+    //     setClicked(i)
+    // }
+
+    // function handleSwipe(e){
+    //     if(touched){
+    //         if(e.touches[0].clientY > prevY){
+
+    //             const differenceOfMove = Math.abs(e.touches[0].clientY - prevY)
+    //             if(differenceOfMove > 50 && differenceOfMove < 200){
+    //                 setAllowScroll(false)
+    //                 setSwiped(true)
+    //             } else if (differenceOfMove >= 200) {
+    //                 setAllowScroll(true)
+    //                 setSwiped(false)
+    //             }
+
+    //         } else {
+    //             setAllowScroll(true)
+    //         }
+    //     } 
+    // }
+
+    // function handleWhoVisible(i){
+    //     if(window.innerWidth > 992){
+    //         if(clicked === i){
+    //             return "z-1"
+    //         } else {
+    //             return "z-0 overlay"
+    //         }
+            
+    //     } else {
+    //             if(isContactView){
+    //                 if(i===0){
+    //                     return "contact-on-view z-1"
+    //                 } else{
+    //                     return "z-0 overlay"
+    //                 }
+    //                 }else{
+    //                     if(i===0){
+    //                         return "z-0 overlay"
+    //                     } else{ 
+    //                         return "contact-on-view z-1"
+    //                     }
+    //         }
+    //     }
+    // }
+    
+    // function handleTouched(e){
+    //     setPrevY(e.touches[0].clientY)
+    //     setTouched(true);
+    // }
+    // function handleTouchLeave(i){
+    //     if(swiped){
+    //         setIsContactsView(!isContactView);
+    //         if(clicked === 0){
+    //             setClicked(1)
+    //         } else {
+    //             setClicked(0)
+    //         }
+    //     }
+    //     setSwiped(false)
+    //     setTouched(false)
+    // }
 
     return ( 
-        <div className="customer-section">
+        <div id="customer-section" className="customer-section">
             <h1 className="pt-5">Contattaci per saperne di più</h1>
-            <h5 className={(window.innerWidth > 992 ? "visually-hidden ": "" )+ "mt-4"}>Scorri verso l'alto per cambiare contenuto o <br/> clicca la parte più scura</h5>
+            <div className="wrapper-btn">
+                <input onChange={()=>handleClick()} type="checkbox" name="checkbox" checked={checkboxChecked} className="switch" />
+            </div> 
+
+            {/* <h5 className={(window.innerWidth > 992 ? "visually-hidden ": "" )+ "mt-4"}>Scorri verso l'alto per cambiare contenuto o <br/> clicca la parte più scura</h5> */}
             <div id="contact" className={"contact-section d-flex justify-content-center align-items-center position-relative" + ((window.innerWidth <= 992) ? " flex-column" : "" )}>
 
-                <div onClick={() => handleClick(0)} onTouchStart={handleTouched} onTouchEnd={()=>handleTouchLeave(0)} onTouchMove={handleSwipe} className={"contact-us " + handleWhoVisible(0)}>
-                    <div className={"w-100 h-100 z-2 bg-dark position-absolute opacity-75 " + (((clicked === 0 && window.innerWidth > 992) || isContactView) ? "visually-hidden" : "z-2 pointer" )}></div>
+                <div ref={contactUs} className={"contact-us " + handleWhoVisible(0)}>
+                    {(window.innerWidth > 992) ? <div onClick={()=>handleClick()} className={"w-100 h-100 z-2 bg-dark position-absolute opacity-75 " + ((clicked === 0 && window.innerWidth > 992) ? "visually-hidden" : "z-2 pointer" )}></div> : <></>}
                     <h2>Chiedi informazioni tramite il <br/> modulo seguente</h2>
 
                     <form className="row g-3 px-4 mt-3 ">
@@ -157,9 +183,8 @@ const CustomerService = () => {
                 </div>
 
 
-                <div onClick={() => handleClick(1)} onTouchStart={handleTouched} onTouchEnd={()=>handleTouchLeave(1)} onTouchMove={handleSwipe} className={"reference d-flex justify-content-center flex-column " + handleWhoVisible(1) }>
-                    <div className={"w-100 h-100 bg-dark position-absolute opacity-75 " + (((clicked === 1 && window.innerWidth > 992) || !isContactView) ? "visually-hidden" : "z-0 pointer" )}>
-                    </div>
+                <div ref={reference} className={((window.innerWidth <= 992) ? "d-none " : "" ) + "reference d-flex justify-content-center flex-column " + handleWhoVisible(1) }>
+                {(window.innerWidth > 992) ? <div onClick={()=>handleClick()} className={"w-100 h-100 bg-dark position-absolute opacity-75 " + ((clicked === 1 && window.innerWidth > 992) ? "visually-hidden" : "z-0 pointer" )}></div> : <></>}
                     <h2>Utilizza le nostre referenze</h2>
                     <ul>
                         <li><i className="bi bi-telephone"></i>Telefono:&nbsp;&nbsp;<a href="#contact">1234567890</a></li>
@@ -169,7 +194,6 @@ const CustomerService = () => {
                         <li><i className="bi bi-tiktok"></i>TikTok:&nbsp;&nbsp;<a href="#contact">myTikTok</a></li>
                     </ul>
                 </div>
-
             </div>
         </div>
      );
