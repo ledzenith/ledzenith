@@ -1,3 +1,28 @@
+.text-color-video {
+    color: #29b830;
+  }
+.text-color-sveglia {
+    color:#bd35bd;
+  }
+.text-color-luci {
+    color: #c9642e;
+  }
+.text-color-musica {
+    color: #9559ce;
+  }
+.text-color-wireless {
+    color: #c32857;
+  }
+.text-color-app {
+    color: #2aacca;
+  }
+.text-color-risveglio {
+    color: #ccbc31;
+  }
+.text-shadow-title{
+    text-shadow: 0px 0px 25px rgba(255, 255, 255, .5);
+}
+
 // Stile Dei Bottoni 
 .shadow-btn-sveglia{
     -webkit-box-shadow: 0px 3px 15px -2px rgba(189,53,189,0.71);
@@ -13,7 +38,7 @@
     box-shadow: 0px 3px 15px -2px rgba(189, 101, 53, 0.71);
 }
 #bg-color-luci{
-    background-color: rgb(201, 100, 46) !important;
+    background-color: #c9642e !important;
 }
 .shadow-btn-musica{
     -webkit-box-shadow: 0px 3px 15px -2px rgba(123, 53, 189, 0.71);
@@ -21,7 +46,7 @@
     box-shadow: 0px 3px 15px -2px rgba(123, 53, 189, 0.71);
 }
 #bg-color-musica{
-    background-color: rgb(117, 36, 193) !important;
+    background-color: #7524c1 !important;
 }
 .shadow-btn-wireless{
     -webkit-box-shadow: 0px 3px 15px -2px rgba(194, 53, 95, 0.71);
@@ -29,7 +54,7 @@
     box-shadow: 0px 3px 15px -2px rgba(194, 53, 95, 0.71);
 }
 #bg-color-wireless{
-    background-color: rgb(195, 40, 87) !important;
+    background-color: #c32857 !important;
 }
 .shadow-btn-app{
     -webkit-box-shadow: 0px 3px 15px -2px rgba(53, 164, 189, 0.71);

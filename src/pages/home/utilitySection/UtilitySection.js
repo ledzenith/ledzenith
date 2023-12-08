@@ -184,8 +184,8 @@ const UtilitySection = () => {
     return (          
                 <div ref={utilitySectionRef} className="container-fluid bg-utility-custom position-relative">
                         <div className="utility-text">
-                            <h1 className="text-white">L'innovazione sotto forma di Led è arrivata!</h1>
-                            <h5 className="px-5 fst-italic text-light">Scopri Ledzenith e tutte le sue funzionalità</h5>
+                            <h1 className="text-white">L'innovazione sotto forma di <span className={ (btnSvegliaClick ? "text-color-sveglia text-shadow-title" : btnLuciClick ? "text-color-luci text-shadow-title" : btnMusicaClick ? "text-color-musica text-shadow-title" : btnWirelessClick ? "text-color-wireless text-shadow-title" : btnAppClick ? "text-color-app text-shadow-title" : btnRisveglioClick ? "text-color-risveglio text-shadow-title" : btnVideoClick ? " text-color-video text-shadow-title" :  "")}>Led</span> è arrivata!</h1>
+                            <h5 className="px-5 fst-italic text-light">Scopri <span className="text-shadow-title"><span className={ (btnSvegliaClick ? "text-color-sveglia" : btnLuciClick ? "text-color-luci" : btnMusicaClick ? "text-color-musica" : btnWirelessClick ? "text-color-wireless" : btnAppClick ? "text-color-app" : btnRisveglioClick ? "text-color-risveglio" : btnVideoClick ? " text-color-video" :  "")}>Led</span>zenith</span> e tutte le sue funzionalità</h5>
                         </div>
                         <div  id="utility-section" className="utility-container row d-block d-lg-flex align-items-center white">
                             <div className={((window.innerWidth > 992) ? "vh-100 pb-video " : "pt-video ") + "video-container order-2 col-6 d-flex flex-column justify-content-center align-items-center w-50"}>
