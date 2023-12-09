@@ -1,0 +1,277 @@
+// Stile Dei Bottoni 
+.shadow-btn-sveglia{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(189,53,189,0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(189,53,189,0.71);
+    box-shadow: 0px 3px 15px -2px rgba(189,53,189,0.71);
+}
+#bg-color-sveglia{
+    background-color:rgb(212, 23, 212) !important;
+}
+.shadow-btn-luci{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(189, 101, 53, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(189, 101, 53, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(189, 101, 53, 0.71);
+}
+#bg-color-luci{
+    background-color: rgb(201, 100, 46) !important;
+}
+.shadow-btn-musica{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(123, 53, 189, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(123, 53, 189, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(123, 53, 189, 0.71);
+}
+#bg-color-musica{
+    background-color: rgb(117, 36, 193) !important;
+}
+.shadow-btn-wireless{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(194, 53, 95, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(194, 53, 95, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(194, 53, 95, 0.71);
+}
+#bg-color-wireless{
+    background-color: rgb(195, 40, 87) !important;
+}
+.shadow-btn-app{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(53, 164, 189, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(53, 164, 189, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(53, 164, 189, 0.71);
+}
+#bg-color-app{
+    background-color: rgb(42, 172, 202) !important;
+}
+.shadow-btn-risveglio{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(173, 189, 53, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(173, 189, 53, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(173, 189, 53, 0.71);
+}
+#bg-color-risveglio{
+    background-color: rgb(196, 205, 38) !important;
+}
+.shadow-btn-video{
+    -webkit-box-shadow: 0px 3px 15px -2px rgba(53, 189, 60, 0.71);
+    -moz-box-shadow: 0px 3px 15px -2px rgba(53, 189, 60, 0.71);
+    box-shadow: 0px 3px 15px -2px rgba(53, 189, 60, 0.71);
+}
+#bg-color-video{
+    background-color: rgb(41, 184, 48) !important;
+}
+
+.btn {
+    position: relative !important;
+    min-width: 80px;
+    color: none;
+    max-width: 350px;
+}
+
+.min-size-btn{
+    min-width: 200px !important;
+} 
+
+.btn-px{
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+.btn-bg-gray{
+    background-color: #e0e6ec !important;
+}
+
+
+.white{
+    color: white !important;
+}
+.black{
+    color: #262b2e;
+}
+
+
+.bg-utility-custom {
+    background-color: #262b2e !important;
+    background: url("../assets/img/utility-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.border-solid{
+    border: solid;
+}
+
+
+// Stile Video e Design Attorno
+.border-sveglia{
+    border-color: rgb(150, 18, 150) !important;
+    background-color: rgb(155, 30, 155) !important;
+}
+.border-luci{
+    border-color: rgb(201, 100, 46) !important;
+    background-color: rgb(185, 96, 48) !important;
+}
+.border-musica{
+    border-color: rgb(117, 36, 193) !important;
+    background-color: rgb(85, 32, 136) !important;
+}
+.border-wireless{
+    border-color: rgb(195, 40, 87) !important;
+    background-color: rgb(145, 43, 73) !important;
+}
+.border-app{
+    border-color: rgb(42, 172, 202) !important;
+    background-color: rgb(46, 149, 172) !important;
+}
+.border-risveglio{
+    border-color: rgb(204, 188, 49) !important;
+    background-color: rgb(179, 169, 41) !important;
+}
+.border-video{
+    border-color: rgb(41, 184, 48) !important;
+    background-color: rgb(44, 151, 50) !important;
+}
+
+.size-video-container{
+    width: 80vw !important;
+    height: 50vw !important;
+}
+.ratio::before{
+    display: inline !important;
+}
+.bg-attacco-sveglia{
+    background: rgb(210,187,207);
+    background: -moz-linear-gradient(207deg, rgba(210,187,207,1) 0%, rgba(213,60,213,1) 100%);
+    background: -webkit-linear-gradient(207deg, rgba(210,187,207,1) 0%, rgba(213,60,213,1) 100%);
+    background: linear-gradient(207deg, rgba(210,187,207,1) 0%, rgba(213,60,213,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d2bbcf",endColorstr="#d53cd5",GradientType=1);  
+}
+.video-container{
+    margin-right: auto;
+    margin-left: auto;
+}
+.f1-custom{
+    font-size: 2.8vw !important;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cable-top-l{
+    width: 15vw !important;
+    height: auto !important;
+    left: -15vw !important;
+    top: 2vw !important;
+}
+.cable-mid-l{
+    width: 15vw !important;
+    height: auto !important;
+    left: -15vw !important;
+    top: 14.5vw !important;
+}
+.cable-bot-l{
+    width: 18.7vw !important;
+    height: auto !important;
+    left: -18.7vw !important;
+    top: 25.5vw !important;
+}
+.cable-top-r{
+    width: 14.8vw !important;
+    height: auto !important;
+    right: -14.8vw !important;
+    left: auto !important;
+    top: 2vw !important;
+    transform: scaleX(-1);
+}
+.cable-mid-r{
+    width: 14.8vw !important;
+    height: auto !important;
+    right: -14.8vw !important;
+    left: auto !important;
+    top: 14.5vw !important;
+    transform: scaleX(-1);
+}
+.cable-bot-r{
+    width: 18.6vw !important;
+    height: auto !important;
+    right: -18.6vw !important;
+    left: auto !important;
+    top: 25.5vw !important;
+    transform: scaleX(-1);
+}
+
+.cable-video{
+    width: 0.7vw !important;
+    height: auto !important;
+    right: 22.05vw !important;
+    left: auto !important;
+    top: 29.8vw !important;
+}
+
+.cable {
+    width: 0.6rem !important;
+    height: 9vw !important;
+    right: 49.3vw  !important;
+    left: auto !important;
+}
+
+.utility-container{
+    padding-bottom: 5rem;
+    padding-top: 5rem !important;
+}
+img{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.pb-video{
+    padding-bottom: 5rem !important;
+}
+
+.utility-text{
+    padding-top: 3rem;
+}
+
+@media (min-width: 992px) { 
+    .btn-group button:nth-of-type(1) {
+        top: -3vw ;
+    }
+    .btn-group button:nth-of-type(2) {
+        top: 4vw ;
+    }
+    .btn-group button:nth-of-type(3) {
+        top: 10vw ;
+    }
+
+    .container-video button{
+        top: 5vw;
+    }    
+
+    .utility-container{
+        padding-bottom: 0rem;
+        bottom: 8rem;
+        padding-top: 0rem !important;
+    }
+    .btn-gap-y{
+        row-gap: 8vw;
+    }
+
+    .btn-group{
+        align-items: center;
+        padding-bottom: 7rem;
+    }
+
+    .btn-px{
+        padding-left: inherit !important;
+        padding-right: inherit !important;
+    }
+
+    .size-video-container{
+        width: 45vw !important;
+        height: 30vw !important;
+    }
+    .f1-custom{
+        font-size: 1.6vw !important;
+    }
+}
+

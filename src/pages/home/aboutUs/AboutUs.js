@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 
 const AboutUs = () => {
     return ( 
-        <div id="about-section" className={"about-us" + ((window.innerWidth < 992) ? " flex-wrap gap-5" : "")}    >
-            
+        <div id="about-section" className={"about-us" + ((window.innerWidth < 992) ? " flex-wrap gap-5" : "")}  >
 
             <div className={((window.innerWidth <= 992) ? "flex-wrap " : "") + "about-container d-flex justify-content-center"}>
                 <div className="about-text px-3">
@@ -21,7 +20,7 @@ const AboutUs = () => {
                     <img src={aboutPg} alt="Illustrazione" className="about-image"/>
                 </div>
             </div>
-            
+               
         </div>
      );
 }
